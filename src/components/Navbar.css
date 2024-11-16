@@ -1,0 +1,50 @@
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 10;
+    color: black;
+}
+
+nav .gradient-text {
+    background: linear-gradient(90deg, #EA7D06 0%, #D63715 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    z-index: 10;
+}
+
+nav a {
+    transition: color 0.3s ease;
+}
+
+/* 
+nav a:hover {
+    color: #f97316;
+} */
+
+.navbar-link {
+    color: #525252;
+    font-family: Gilroy-Bold;
+    font-size: 19.73px;
+    font-weight: 400;
+    line-height: 30.42px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}

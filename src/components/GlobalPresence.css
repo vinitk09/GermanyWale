@@ -1,0 +1,65 @@
+.global-presence {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.image-card {
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 32px rgba(234, 125, 6, 0.5);
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+    /* Smooth transition */
+}
+
+.hidden {
+    opacity: 0;
+    /* Hide the image */
+}
+
+.visible {
+    opacity: 1;
+    /* Show the image */
+}
+
+/* Additional styles to position sliders */
+.right-slider {
+    animation: slide-right 15s infinite;
+    /* Adjust duration as needed */
+}
+
+.left-slider {
+    animation: slide-left 15s infinite;
+    /* Adjust duration as needed */
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
