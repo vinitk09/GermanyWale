@@ -1,0 +1,153 @@
+.text-center h3 {
+    font-family: "Gilroy";
+    font-size: 3rem;
+    /* Adjust as needed */
+    font-weight: bold;
+    color: #d63715;
+}
+
+.text-center p {
+    font-family: "Gilroy";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    color: #101828;
+}
+
+.relative .absolute {
+    font-size: 120px;
+    font-weight: bold;
+    color: #ffd9b1;
+}
+
+/* Base styles for the grid and rows */
+.grid {
+    overflow: hidden;
+    position: relative;
+}
+
+.row-1,
+.row-2 {
+    display: flex;
+    animation: slide infinite linear;
+}
+
+/* Different sliding directions */
+.row-1 {
+    animation-name: moveLeft;
+    animation-duration: 10s;
+}
+
+.row-2 {
+    animation-name: moveRight;
+    animation-duration: 10s;
+}
+
+/* Pause animation when hovering over any image in the row */
+.row-1:hover,
+.row-2:hover {
+    animation-play-state: paused;
+    /* Stops the entire row's animation */
+}
+
+/* Image styling */
+.university-image {
+    width: 150px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover state for individual images */
+.university-image:hover {
+    filter: grayscale(0%);
+}
+
+/* Animations */
+@keyframes moveLeft {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    margin: 2rem 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-content {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: fit-content;
+}
+
+.carousel-track:hover .carousel-content {
+    animation-play-state: paused;
+}
+
+.carousel-track.reverse .carousel-content {
+    animation-direction: reverse;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+
+
+.carousel-content {
+    display: flex;
+    gap: 2rem;
+    /* Add a consistent gap between images */
+    animation: scroll 20s linear infinite;
+    width: fit-content;
+}
+
+.university-image {
+    width: 150px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.university-image:hover {
+    filter: grayscale(0%);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-20%);
+    }
+}

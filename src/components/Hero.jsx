@@ -6,6 +6,7 @@ import Audi from "../assets/Audi.png";
 import BMW from "../assets/BMW.png";
 import Lufthansa from "../assets/Lufthansa.png";
 import "./Hero.css";
+
 const Hero = () => {
   return (
     <div
@@ -15,7 +16,7 @@ const Hero = () => {
         filter: "brightness(0.9)",
       }}
     >
-      <div className="max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 custom-left-margin">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -33,7 +34,7 @@ const Hero = () => {
               textUnderlinePosition: "from-font",
               textDecorationSkipInk: "none",
             }}
-            className="text-gray-900 sm:text-5xl md:text-6xl"
+            className="text-gray-900 sm:text-5xl md:text-6xl responsive-text"
           >
             <span className="block">Empowering Dreams</span>
             <span className="block">of Studying in</span>
@@ -44,48 +45,34 @@ const Hero = () => {
             <Link
               to="/contact"
               style={{
-                background: "linear-gradient(180deg, #EA7D06 0%, #D63715 100%)",
+                background: "linear-gradient(90deg, #D63715 0%, #FF9422 100%)",
+                width: "240.13px", // Width
+                height: "47.52px", // Height
+
+                borderRadius: "11.09px", // Radius
               }}
-              className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:text-lg"
+              className="inline-flex items-center justify-center border border-transparent text-base font-medium text-white hover:bg-blue-700 md:text-lg"
             >
               Call for free Counselling
             </Link>
+
             <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
               Our students work at global offices of
             </p>
           </div>
-          <div className="flex items-center gap-2 py-0  ">
-            <div className="relative w-20 h-20 bg-white/10 rounded-lg p-4 shadow-sm hover:shadow-md transition duration-300">
-              <img
-                src={Tesla}
-                alt="Service 1"
-                className="w-full h-full object-contain opacity-80 hover:opacity-100 transition duration-300"
-              />
-            </div>
-
-            <div className="relative w-20 h-20 bg-white/10 rounded-lg p-4 shadow-sm hover:shadow-md transition duration-300">
-              <img
-                src={Audi}
-                alt="Service 2"
-                className="w-full h-full object-contain opacity-80 hover:opacity-100 transition duration-300"
-              />
-            </div>
-
-            <div className="relative w-20 h-20 bg-white/10 rounded-lg p-4 shadow-sm hover:shadow-md transition duration-300">
-              <img
-                src={Lufthansa}
-                alt="Service 3"
-                className="w-full h-full object-contain opacity-80 hover:opacity-100 transition duration-300"
-              />
-            </div>
-
-            <div className="relative w-20 h-20 bg-white/10 rounded-lg p-4 shadow-sm hover:shadow-md transition duration-300">
-              <img
-                src={BMW}
-                alt="Service 4"
-                className="w-full h-full object-contain opacity-80 hover:opacity-100 transition duration-300"
-              />
-            </div>
+          <div className="flex items-left gap-2 py-0">
+            {[Tesla, Audi, Lufthansa, BMW].map((logo, index) => (
+              <div
+                key={index}
+                className="relative w-20 h-20 bg-white/10 rounded-lg p-4 shadow-sm hover:shadow-md transition duration-300"
+              >
+                <img
+                  src={logo}
+                  alt={`Service ${index + 1}`}
+                  className="w-full h-full object-contain opacity-80 hover:opacity-100 transition duration-300"
+                />
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>

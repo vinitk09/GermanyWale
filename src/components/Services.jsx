@@ -79,12 +79,19 @@ const Services = () => {
             SERVICES
           </div>
           <div className="relative z-10">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Our Services
-            </h2>
-            <p className="mt-4 text-xl text-gray-500">
-              Comprehensive support for your journey to study in Germany
-            </p>
+            <div className="text-center mb-16">
+              <h3
+                className="mt-20 text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 relative z-10"
+                style={{
+                  color: "#D63715",
+                }}
+              >
+                What Our Clients Say
+              </h3>
+              {/* <div className="mt-4 text-base sm:text-lg lg:text-xl text-gray-600">
+            helo
+          </div> */}
+            </div>
           </div>
         </div>
 
@@ -102,17 +109,56 @@ const Services = () => {
                   alt={service.title}
                   className="rounded-lg object-cover w-full h-[400px] bg-transparent"
                   style={{
-                    width: "410px",
-                    height: "420px",
+                    width: "400px",
+                    height: "400px",
                   }}
                 />
               </div>
 
               <div className="lg:w-1/2 space-y-4">
-                <h3 className="text-2xl font-bold text-gray-900">
+                <h3
+                  className="text-2xl font-bold text-gray-900"
+                  style={{
+                    fontFamily: "Gilroy-Light",
+                    fontSize: "64px",
+                    fontWeight: "bold",
+                    color: "#101828",
+                    lineHeight: "60.95px",
+                    height: "61px",
+                    // width: "855px",
+                    height:
+                      service.title === "University Shortlisting"
+                        ? "122px"
+                        : "61px",
+                    height:
+                      service.title === "Letter of Recommendation"
+                        ? "163.54px"
+                        : "61px",
+                    height:
+                      service.title === "University Application" ? "" : "",
+                    height:
+                      service.title === "Accommodation and Travel Assistance"
+                        ? ""
+                        : "",
+                  }}
+                >
                   {service.title}
                 </h3>
-                <p className="text-lg text-gray-600">{service.description}</p>
+                <p
+                  className="text-lg text-gray-600"
+                  style={{
+                    // marginRight: "100px",
+                    height: "103px",
+                    fontFamily: "Gilroy-Light",
+                    fontWeight: "400",
+                    fontSize: "20px",
+                    lineHeight: "29px",
+                    width: "450px",
+                    marginBottom: "1rem",
+                  }}
+                >
+                  {service.description}
+                </p>
                 <Link
                   to={service.link}
                   className="inline-flex items-center px-6 py-3 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"

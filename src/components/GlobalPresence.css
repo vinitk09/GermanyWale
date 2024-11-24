@@ -1,65 +1,89 @@
-.global-presence {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+.global-presence-container {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.slider {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+.globalhead {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #d63715;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.slider-container {
+    padding: 1rem;
 }
 
 .image-card {
-    width: 152px;
-    height: 152px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    box-shadow: 6px 6px 32px rgba(234, 125, 6, 0.5);
     background-size: cover;
     background-position: center;
-    transition: opacity 0.5s ease-in-out;
-    /* Smooth transition */
+    box-shadow: 6px 6px 32px rgba(234, 125, 6, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hidden {
-    opacity: 0;
-    /* Hide the image */
+.image-card:hover {
+    transform: scale(1.1);
+    box-shadow: 8px 8px 40px rgba(234, 125, 6, 0.7);
 }
 
-.visible {
-    opacity: 1;
-    /* Show the image */
+/* Dots Customization */
+.slick-dots {
+    bottom: -15px;
 }
 
-/* Additional styles to position sliders */
-.right-slider {
-    animation: slide-right 15s infinite;
-    /* Adjust duration as needed */
+.slick-dots li button:before {
+    font-size: 10px;
+    color: #d63715;
 }
 
-.left-slider {
-    animation: slide-left 15s infinite;
-    /* Adjust duration as needed */
+.slick-dots li.slick-active button:before {
+    color: #e57a42;
 }
 
-@keyframes slide-right {
-    from {
-        transform: translateX(0);
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .globalhead {
+        font-size: 2.5rem;
     }
 
-    to {
-        transform: translateX(-100%);
+    .image-card {
+        width: 100px;
+        height: 100px;
     }
 }
 
-@keyframes slide-left {
-    from {
-        transform: translateX(0);
+@media (max-width: 768px) {
+    .globalhead {
+        font-size: 2rem;
     }
 
-    to {
-        transform: translateX(100%);
+    .image-card {
+        width: 90px;
+        height: 90px;
     }
+}
+
+@media (max-width: 480px) {
+    .globalhead {
+        font-size: 1.5rem;
+    }
+
+    .image-card {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.shadow-flag {
+    box-shadow: 6px 6px 32px var(--sds-size-depth-100, rgba(234, 125, 6, 0.5));
+    /* Use RGBA to ensure opacity, or replace with your preferred color */
+    border-radius: 70%;
+    /* Ensures the shadow aligns with the circular images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

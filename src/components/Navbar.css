@@ -1,50 +1,110 @@
-nav {
+/* General Navbar Styling */
+.navbar {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: transparent;
+    background: transparent;
     z-index: 10;
-    color: black;
+    font-family: 'Gilroy';
+    /* margin-bottom: 20px; */
 }
 
-nav .gradient-text {
-    background: linear-gradient(90deg, #EA7D06 0%, #D63715 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 4rem;
 }
 
-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    z-index: 10;
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-nav a {
+.logo {
+    width: 200px;
+    height: 50px;
+    object-fit: cover;
+
+}
+
+/* Desktop Links */
+.desktop-links {
+    display: flex;
+    gap: 2rem;
+    /* Space between links */
+    margin-left: 3rem;
+    /* Space from logo */
+}
+
+.navbar-link {
+    font-size: 19.73px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #333;
     transition: color 0.3s ease;
 }
 
-/* 
-nav a:hover {
-    color: #f97316;
-} */
-
-.navbar-link {
-    color: #525252;
-    font-family: Gilroy-Bold;
-    font-size: 19.73px;
-    font-weight: 400;
-    line-height: 30.42px;
-    letter-spacing: -0.02em;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+.navbar-link:hover {
+    color: #D63715;
+    text-decoration: underline;
 }
 
-.navbar-link:hover {
-    text-decoration: underline;
+.navbar-link.active {
+    /* font-weight: bold; */
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #EA7D06, #D63715);
+    font-family: Gilroy-bold;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-menu svg {
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .desktop-links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+
+    }
+
+    .mobile-link {
+        font-size: 19.73px;
+        font-weight: 500;
+        text-decoration: none;
+        color: #333;
+        padding: 0.5rem 0;
+        transition: color 0.3s ease;
+    }
+
+    .mobile-link:hover {
+        color: #D63715;
+        text-decoration: underline;
+    }
 }

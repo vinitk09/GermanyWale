@@ -1,0 +1,120 @@
+.chooseheading>h1 {
+    font-family: Gilroy;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 29px;
+    text-align: center;
+    color: #FF9422;
+    margin: 1rem;
+}
+
+.chooseheading>h2 {
+    font-family: Gilroy;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 45px;
+    text-align: center;
+    color: #D63715;
+    margin: 1.5rem;
+}
+
+.imagecontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+}
+
+/* Common styles for image containers */
+.image1,
+.image2,
+.image3,
+.image4 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Image wrapper styles */
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+    cursor: pointer;
+}
+
+/* Base image styles */
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6 {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+/* Individual image container styles */
+.image-wrapper.img1-container,
+.image-wrapper.img2-container {
+    width: 300px;
+    height: 324px;
+}
+
+.image-wrapper.img3-container {
+    width: 420px;
+    height: 690px;
+}
+
+.image-wrapper.img4-container,
+.image-wrapper.img5-container {
+    width: 300px;
+    height: 324px;
+}
+
+.image-wrapper.img6-container {
+    width: 400px;
+    height: 691px;
+}
+
+/* Hover effects */
+.image-wrapper:hover img {
+    transform: translateY(-8px);
+    filter: sepia(50%) hue-rotate(90deg);
+}
+
+/* Text overlay styles */
+.text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    z-index: 2;
+    transition: transform 0.5s ease;
+    pointer-events: none;
+}
+
+.image-wrapper:hover .text-overlay {
+    transform: translateY(-100%);
+}
+
+/* Add subtle shadow on hover */
+.image-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: #EA7D06;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    border-radius: 20px;
+}
+
+.image-wrapper:hover::after {
+    opacity: 1;
+}

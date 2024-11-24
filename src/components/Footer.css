@@ -1,0 +1,9 @@
+.same {
+    background: "linear-gradient(180deg, #EA7D06 0%, #D63715 100%)";
+    WebkitBackgroundClip: "text";
+    WebkitTextFillColor: "transparent";
+    display: "inline-block";
+    fontSize: "26.41px";
+    fontFamily: "Gilroy";
+    fontWeight: "700";
+}

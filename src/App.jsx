@@ -10,6 +10,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Testimonial from "./components/Testimonials";
 import Testimonials from "./components/Testimonials";
+import Partners from "./components/Partners";
+import Universities from "./components/Universities";
+import Mentor from "./components/Mentor";
+import ChooseUs from "./components/ChooseUs";
+import "./assets/fonts.css";
 
 function App() {
   return (
@@ -23,9 +28,13 @@ function App() {
               element={
                 <>
                   <Hero />
+                  <ChooseUs />
                   <GlobalPresence />
                   <Testimonials />
                   <Services />
+                  <Partners />
+                  <Universities />
+                  <Mentor />
                   {/* <TestimonialSlider /> */}
                 </>
               }
