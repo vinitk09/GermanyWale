@@ -1,89 +1,198 @@
-.global-presence-container {
-    padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.globalhead {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #d63715;
-    text-align: center;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-}
-
-.slider-container {
-    padding: 1rem;
-}
-
-.image-card {
-    width: 120px;
-    height: 120px;
+.shadow-flag {
+    box-shadow: 6px 6px 32px #EA7D06;
+    /* Adjust shadow size and color */
     border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 6px 6px 32px rgba(234, 125, 6, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Ensures circular shape */
+    transition: box-shadow 0.3s ease;
+    /* Optional: Smooth hover effect */
 }
 
-.image-card:hover {
-    transform: scale(1.1);
-    box-shadow: 8px 8px 40px rgba(234, 125, 6, 0.7);
-}
-
-/* Dots Customization */
-.slick-dots {
-    bottom: -15px;
-}
-
-.slick-dots li button:before {
-    font-size: 10px;
-    color: #d63715;
-}
-
-.slick-dots li.slick-active button:before {
-    color: #e57a42;
-}
-
-/* Responsiveness */
-@media (max-width: 1024px) {
-    .globalhead {
-        font-size: 2.5rem;
-    }
-
-    .image-card {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media (max-width: 768px) {
-    .globalhead {
-        font-size: 2rem;
-    }
-
-    .image-card {
-        width: 90px;
-        height: 90px;
-    }
-}
-
-@media (max-width: 480px) {
-    .globalhead {
-        font-size: 1.5rem;
-    }
-
-    .image-card {
-        width: 80px;
-        height: 80px;
-    }
+.shadow-flag:hover {
+    box-shadow: 8px 8px 36px #EA7D06;
+    /* Optional: Slightly increase shadow on hover */
 }
 
 .shadow-flag {
-    box-shadow: 6px 6px 32px var(--sds-size-depth-100, rgba(234, 125, 6, 0.5));
-    /* Use RGBA to ensure opacity, or replace with your preferred color */
-    border-radius: 70%;
-    /* Ensures the shadow aligns with the circular images */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 6px 6px 32px #EA7D06;
+    /* Adds shadow behind the image */
+    border-radius: 50%;
+    /* Ensures the div remains circular */
+    overflow: hidden;
+    /* Ensures the image stays within the circular shape */
+}
+
+.slider-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 386px;
+    background-color: #FFFFFF;
+}
+
+.heading-global-presence {
+    height: 129px;
+    font-family: Gilroy-SemiBold;
+    font-size: 66.56px;
+    font-weight: 400;
+    line-height: 119px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #D63715;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+    animation: slideAnimation 16s linear infinite;
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    width: 152px;
+    height: 152px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 6px 6px 32px #EA7D06;
+    flex-shrink: 0;
+}
+
+.img1 {
+    background-image: url('../assets/Country1.png');
+}
+
+.img2 {
+    background-image: url('../assets/Country2.png');
+}
+
+.img3 {
+    background-image: url('../assets/Country3.png');
+}
+
+.img4 {
+    background-image: url('../assets/Country4.png');
+}
+
+.img5 {
+    background-image: url('../assets/Country5.png');
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(100%);
+    }
+
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+@media (max-width: 468px) {
+    .slider-main-container {
+        height: 400px;
+    }
+
+    .heading-global-presence {
+        font-family: Gilroy-SemiBold;
+        font-size: 36.56px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        text-align: center;
+        color: #D63715;
+    }
+
+    .slider {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        /* overflow: hidden; */
+        /* Hide slides outside view */
+        position: relative;
+        width: 100%;
+        height: 250px;
+    }
+
+    .slides-container {
+        display: flex;
+        animation: slideAnimation 16s linear infinite;
+    }
+
+    .slide {
+        width: 112px;
+        height: 112px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        box-shadow: 6px 6px 32px #EA7D06;
+    }
+
+    /* Keyframes for seamless sliding */
+    @keyframes slideAnimation {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-400%);
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .slider-main-container {
+        height: 400px;
+    }
+
+    .heading-global-presence {
+        font-family: Gilroy-SemiBold;
+        font-size: 36.56px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        text-align: center;
+        color: #D63715;
+    }
+
+    .slider {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        /* overflow: hidden; */
+        /* Hide slides outside view */
+        position: relative;
+        width: 100%;
+        height: 250px;
+    }
+
+    .slides-container {
+        display: flex;
+        animation: slideAnimation 16s linear infinite;
+    }
+
+    .slide {
+        width: 112px;
+        height: 112px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        box-shadow: 6px 6px 32px #EA7D06;
+    }
+
+    /* Keyframes for seamless sliding */
+    @keyframes slideAnimation {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-400%);
+        }
+    }
+
 }

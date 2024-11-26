@@ -147,14 +147,13 @@ const Services = () => {
                 <p
                   className="text-lg text-gray-600"
                   style={{
-                    // marginRight: "100px",
-                    height: "103px",
-                    fontFamily: "Gilroy-Light",
-                    fontWeight: "400",
+                    fontFamily: " Gilroy-Light",
                     fontSize: "20px",
+                    fontWeight: "400",
                     lineHeight: "29px",
-                    width: "450px",
-                    marginBottom: "1rem",
+                    textAlign: "left",
+                    textUnderlinePosition: "from-font",
+                    // text-decoration-skipink:"none
                   }}
                 >
                   {service.description}

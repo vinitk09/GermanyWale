@@ -1,382 +1,179 @@
-* {
+.test-name {
     font-family: Gilroy;
-}
-
-.maincontainer {
-    background-color: #FFFFFF;
-}
-
-.heading {
-    position: relative;
-    /* Allows positioning of child elements */
-    font-family: Gilroy;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22.28px;
     text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.test-role {
+
+    font-family: Gilroy;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.testimonial-outer-heading {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-heading {
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Gilroy;
+    font-size: 134.99px;
     font-weight: 900;
-    font-size: 196.87px;
-    /* Default size for large screens */
     line-height: 196.87px;
-    letter-spacing: 1%;
-    color: rgba(255, 217, 177, 0.7);
-    margin-bottom: 150px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFD9B17A;
 }
 
-.heading>h2 {
-    margin: 0;
+.testimonial-outer-heading-2 {
     position: relative;
-    /* Needed for proper stacking context */
-    z-index: 1;
-    margin-bottom: 30px;
-    /* Ensures it is below h5 */
-}
-
-.heading>h5 {
+    top: -90px;
     font-family: Gilroy;
     font-size: 66.56px;
     font-weight: 600;
     line-height: 62px;
     letter-spacing: 0.01em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
     color: #D63715;
-    text-align: center;
-    position: absolute;
-    /* margin-bottom: 30px; */
-    /* Overlay above h2 */
-    bottom: 10px;
-    /* Position just above the bottom of h2 */
-    left: 50%;
-    transform: translateX(-50%);
-    /* Center horizontally */
-    z-index: 2;
-    /* Ensure it is above h2 */
+
 }
 
-@media (max-width: 1024px) {
-    .heading {
-        font-size: 140px;
-        line-height: 140px;
+@media (max-width:768px) {
+    .testimonial-outer-heading {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
-    .heading>h5 {
-        font-size: 48px;
-        /* Adjust font size for smaller screens */
-        line-height: 50px;
-    }
-}
-
-@media (max-width: 768px) {
-    .heading {
-        font-size: 90px;
-        line-height: 90px;
-    }
-
-    .heading>h5 {
-        font-size: 36px;
-        /* Further adjustment */
-        line-height: 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    .heading {
-        font-size: 70px;
-        line-height: 70px;
+    .testimonial-heading {
+        /* text-align: center; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Gilroy;
+        font-size: 74.99px;
+        font-weight: 900;
+        line-height: 46.87px;
+        letter-spacing: 0.01em;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #FFD9B17A;
     }
 
-    .heading>h5 {
-        font-size: 28px;
-        /* Smaller for mobile */
-        line-height: 30px;
-        bottom: 5px;
-        /* Adjust spacing */
+    .testimonial-outer-heading-2 {
+        position: relative;
+        top: -18px;
+        font-family: Gilroy;
+        font-size: 40.56px;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: 0.01em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #D63715;
+
     }
 }
 
-.card-section {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-}
+@media (max-width:468px) {
+    .testimonial-outer-heading {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
 
-.cards {
-    position: relative;
-    /* Ensure the child elements are positioned relative to this container */
-    width: 302px;
-    height: 342px;
-}
+    .testimonial-heading {
+        /* text-align: center; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Gilroy;
+        font-size: 44.99px;
+        font-weight: 900;
+        line-height: 46.87px;
+        letter-spacing: 0.01em;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #FFD9B17A;
+    }
 
-.cards>.back-card {
-    position: absolute;
-    width: 292px;
-    height: 282px;
-    z-index: 1;
-    /* Ensure the back card is below */
-    gap: 0px;
-    opacity: 1;
-    /* Make it visible */
-    transform: rotate(7.35deg);
-    border-radius: 20px 40px 60px 100px;
-    background: linear-gradient(180deg, #FF9422 0%, #D63715 100%);
-    clip-path: polygon(0% 0%, 100% 50%, 90% 500%, 0% 100%);
-}
+    .testimonial-outer-heading-2 {
+        position: relative;
+        top: -25px;
+        font-family: Gilroy;
+        font-size: 20.56px;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: 0.01em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #D63715;
 
-.cards>.front-card {
-    position: absolute;
-    width: 312px;
-    height: 282px;
-    z-index: 2;
-    /* Ensure the front card is above */
-    top: -40px;
-    /* Adjust the position */
-    left: 20px;
-    /* Adjust the position */
-    gap: 0px;
-    opacity: 1;
-    /* Ensure visibility */
-    background-color: #FFF8F1;
-    /* border: 2px solid black; */
-    border-radius: 30px 190px 60px 140px;
-    /* Rounded corners remain */
-
-    /* Create an inclined slope with the clip-path */
-
-    transform: rotate(4.4deg);
-    transform: skewY(6deg) scaleY(1.1);
-
-}
-
-.cards>.bcm {
-    position: absolute;
-    transform: rotate(-2deg);
-    /* Slight rotation */
-    clip-path: polygon(0% 0%,
-            /* Top-left corner */
-            100% 0%,
-            /* Top-right corner */
-            100% 100%,
-            /* Bottom-right corner */
-            0% 90%
-            /* Sloped bottom-left corner */
-        );
-    top: -59px;
-    height: 360px;
-    width: 380px;
-    /* Match width for alignment */
-    background: linear-gradient(180deg, #FF9422 0%, #D63715 100%);
-    /* Adjust as needed */
-    z-index: 1;
-    border-radius: 20px 330px 90px 290px;
-    /* To maintain rounded corners */
-}
-
-.cards>.fcm {
-    position: absolute;
-    top: -48px;
-    /* Align slightly above */
-    width: 380px;
-    /* Match width */
-    height: 332px;
-    /* Adjust as per need */
-    left: -22px;
-    border-radius: 20px;
-    /* Rounded corners */
-    transform: skewX(0.2deg);
-    /* Apply skew for sloped effect */
-    background: #FFF8F1;
-    /* Adjust the color as needed */
-    z-index: 2;
-    /* Ensure it's above .bcm */
-    overflow: hidden;
-    /* Prevent content overflow */
-}
-
-.cards>.bcr {
-    transform: rotate(-7.35deg);
-    border-radius: 240px 50px 100px 60px;
-    clip-path: polygon(0% 0%,
-            /* Top-left corner */
-            100% 0%,
-            /* Top-right corner */
-            100% 100%,
-            /* Bottom-right corner */
-            0% 100%
-            /* Sloped bottom-left corner */
-        );
-    left: 56px;
-    /* width: 369px; */
-}
-
-.cards>.fcr {
-
-    transform: rotate(-4.4deg) skewY(-6deg) scaleY(1.1);
-    border-radius: 190px 30px 140px 60px;
-    /* width: 372px; */
-    left: 14px;
+    }
 }
 
 
-.cards>.card-details {
-    position: absolute;
-    top: -30%;
-    /* Adjust positioning to center content */
-    left: 50%;
-    transform: translateX(-50%);
-    /* Center horizontally */
-    width: 90%;
-    /* Keep the content within bounds of the .front-card */
-    z-index: 3;
-    text-align: center;
-    overflow: hidden;
-    font-family: Gilroy;
-    /* padding: 10px; */
-
-    box-sizing: border-box;
-    color: #525252;
+.nslide {
+    background: linear-gradient(180deg, #EA7D06 0%, #D63715 100%);
+    border: none;
+    outline: none;
 }
 
-.cards>.card-details>.card-image {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 10px;
-    border-radius: 50%;
-    overflow: hidden;
-    /* Crop the image to fit within bounds */
-    border: 2px solid #ddd;
+.nslide:hover {
+    filter: brightness(1.2);
 }
 
-.cards>.card-details>.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Ensure the image fills the container proportionally */
+.prevslide {
+    background: linear-gradient(180deg, #EA7D06 0%, #D63715 100%);
+    border: none;
+    outline: none;
 }
 
-.cards>.card-details>.card-name {
-    font-family: Gilroy;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 22.28px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    margin-bottom: 5px;
+.prevslide:hover {
+    filter: brightness(1.2);
 }
 
-.cards>.card-details>.card-designation {
-    font-family: Gilroy;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14.4px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    margin: 10px;
-}
+@media (max-width:468px) {
+    .prevslide {
+        width: 39.5px;
+        height: 39.5px;
+        zIndex: 3;
+        top: 390px;
+    }
 
-.cards>.card-details>.card-description {
-    font-family: Gilroy;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14.4px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    margin: 12px;
-}
-
-.cards>.card-details>.cnm {
-    font-family: Gilroy;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 29.71px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    /* top: -40%; */
-}
-
-.cards>.card-details>.cdm {
-    font-family: Gilroy;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21.6px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #525252;
-}
-
-.cards>.card-details>.cddm {
-    font-family: Gilroy;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21.6px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #525252;
-    margin: 0px;
-}
-
-.cards>.card-details>.cnr {
-    padding: 10px;
-    font-family: Gilroy;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 22.28px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
-}
-
-.cards>.card-details>.cdr {
-    /* padding: 10px; */
-    font-family: Gilroy;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14.4px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-}
-
-.cards>.card-details>.cddr {
-    padding: 10px 0px 0px 10px;
-    font-family: Gilroy;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14.4px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #525252;
-}
-
-.circle-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(180deg, #ea7d06 0%, #d63715 100%);
-    border: 2px solid #d63715;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 10;
-    /* Ensure it stays above the cards */
-}
-
-.circle-arrow.left-arrow {
-    left: 20px;
-    /* top: 300px; */
-    /* Adjust as needed to position left arrow over the left side of the card-section */
-}
-
-.circle-arrow.right-arrow {
-    right: 32px;
-    /* Adjust as needed to position right arrow over the right side of the card-section */
+    .nslide {
+        width: 39.5px;
+        height: 39.5px;
+        zIndex: 3;
+        top: 390px;
+    }
 }

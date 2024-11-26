@@ -30,12 +30,12 @@ function App() {
                   <Hero />
                   <ChooseUs />
                   <GlobalPresence />
-                  <Testimonials />
-                  <Services />
-                  <Partners />
-                  <Universities />
-                  <Mentor />
-                  {/* <TestimonialSlider /> */}
+                  {/* <Testimonials /> */}
+                  {/* <Services /> */}
+                  {/* <Partners /> */}
+                  {/* <Universities /> */}
+                  {/* <Mentor /> */}
+                  <TestimonialSlider />
                 </>
               }
             />

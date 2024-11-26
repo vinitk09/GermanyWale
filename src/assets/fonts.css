@@ -16,6 +16,21 @@
 
 @font-face {
     font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Regular.woff2') format('truetype'),
+        url('/fonts/Gilroy-Regular.woff') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url('/src/assets/fonts/gilroy/Gilroy-SemiBold.ttf') format('truetype');
+    font-weight: 400;
+
+}
+
+@font-face {
+    font-family: 'Gilroy';
     src: url('/fonts/Gilroy-Medium.woff2') format('woff2'),
         url('/fonts/Gilroy-Medium.woff') format('woff');
     font-weight: 500;

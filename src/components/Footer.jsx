@@ -18,7 +18,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h3
-              className="text-lg font-semibold mb-4"
+              className="text-lg  mb-4"
               style={{
                 background: "linear-gradient(180deg, #EA7D06 0%, #D63715 100%)",
                 WebkitBackgroundClip: "text",
@@ -32,22 +32,22 @@ const Footer = () => {
               Programs
             </h3>
 
-            <p className="text-sm">
+            <p className="text-sm program-text">
               Your trusted partner for pursuing higher education in Germany. We
               provide end-to-end consultation services to make your dream of
               studying in Germany a reality.
             </p>
             <div className="mt-4 flex space-x-4">
-              <a href="#" className="hover:text-blue-400 transition-colors">
+              <a href="#" className="hover:text-orange-400 transition-colors">
                 <FaFacebook size={20} />
               </a>
-              <a href="#" className="hover:text-blue-400 transition-colors">
+              <a href="#" className="hover:text-orange-400 transition-colors">
                 <FaTwitter size={20} />
               </a>
-              <a href="#" className="hover:text-blue-400 transition-colors">
+              <a href="#" className="hover:text-orange-400 transition-colors">
                 <FaInstagram size={20} />
               </a>
-              <a href="#" className="hover:text-blue-400 transition-colors">
+              <a href="#" className="hover:text-orange-400 transition-colors">
                 <FaLinkedin size={20} />
               </a>
             </div>
@@ -73,7 +73,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about"
-                  className="hover:text-blue-400 transition-colors"
+                  className="hover:text-orange-400 transition-colors"
                 >
                   Study Visa
                 </Link>
@@ -81,7 +81,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services"
-                  className="hover:text-blue-400 transition-colors"
+                  className="hover:text-orange-400 transition-colors"
                 >
                   Accomodation
                 </Link>

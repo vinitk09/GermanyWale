@@ -13,13 +13,19 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         {/* Logo */}
-        <Link to="/" className="logo-container">
-          <img src={Logo} alt="Logo" className="logo" />
-        </Link>
+        <div className="logo-container-div">
+          <Link to="/" className="logo-container">
+            <img src={Logo} alt="Logo" className="logo" />
+          </Link>
+        </div>
 
         {/* Desktop Links */}
         <div className="desktop-links">
-          <Link to="/" className="navbar-link active">
+          <Link
+            to="/"
+            className="navbar-link active"
+            style={{ "--delay": "0s" }}
+          >
             Home
           </Link>
           <Link to="/about" className="navbar-link">
@@ -43,25 +49,23 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="mobile-menu">
-          <Link to="/" className="mobile-link" onClick={toggleMenu}>
-            Home
-          </Link>
-          <Link to="/about" className="mobile-link" onClick={toggleMenu}>
-            About Us
-          </Link>
-          <Link to="/services" className="mobile-link" onClick={toggleMenu}>
-            Services
-          </Link>
-          <Link to="/reviews" className="mobile-link" onClick={toggleMenu}>
-            Reviews
-          </Link>
-          <Link to="/contact" className="mobile-link" onClick={toggleMenu}>
-            Contact Us
-          </Link>
-        </div>
-      )}
+      <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
+        <Link to="/" className="mobile-link" onClick={toggleMenu}>
+          Home
+        </Link>
+        <Link to="/about" className="mobile-link" onClick={toggleMenu}>
+          About Us
+        </Link>
+        <Link to="/services" className="mobile-link" onClick={toggleMenu}>
+          Services
+        </Link>
+        <Link to="/reviews" className="mobile-link" onClick={toggleMenu}>
+          Reviews
+        </Link>
+        <Link to="/contact" className="mobile-link" onClick={toggleMenu}>
+          Contact Us
+        </Link>
+      </div>
     </nav>
   );
 };

@@ -1,4 +1,4 @@
-/* General Navbar Styling */
+/* 
 .navbar {
     position: absolute;
     top: 0;
@@ -6,8 +6,8 @@
     width: 100%;
     background: transparent;
     z-index: 10;
-    font-family: 'Gilroy';
-    /* margin-bottom: 20px; */
+    font-family: Gilroy;
+    
 }
 
 .navbar-container {
@@ -30,13 +30,10 @@
 
 }
 
-/* Desktop Links */
 .desktop-links {
     display: flex;
     gap: 2rem;
-    /* Space between links */
     margin-left: 3rem;
-    /* Space from logo */
 }
 
 .navbar-link {
@@ -53,14 +50,12 @@
 }
 
 .navbar-link.active {
-    /* font-weight: bold; */
     background-clip: text;
     color: transparent;
     background-image: linear-gradient(to right, #EA7D06, #D63715);
     font-family: Gilroy-bold;
 }
 
-/* Hamburger Menu */
 .hamburger-menu {
     display: none;
     background: none;
@@ -106,5 +101,146 @@
     .mobile-link:hover {
         color: #D63715;
         text-decoration: underline;
+    }
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    width: 100%;
+}
+
+.navbar {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 10;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 4rem;
+    background-color: transparent;
+    width: 100%;
+
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 178.39px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.desktop-links {
+    font-family: Gilroy;
+    display: flex;
+    gap: 20.55px;
+    opacity: 0px;
+
+}
+
+.navbar-link {
+    font-family: Gilroy;
+    font-size: 19.73px;
+    font-weight: 500;
+    line-height: 30.42px;
+
+}
+
+.navbar-link.active {
+    font-family: Gilroy-Bold;
+    font-size: 19.73px;
+    font-weight: 400;
+    background-clip: text;
+    color: transparent;
+
+    background-image: linear-gradient(93.62deg, #EA7D06 2.89%, #D63715 98.07%);
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    font-family: Gilroy;
+    font-size: 19.73px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    gap: 15px;
+    padding: 1rem;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@media (max-width:768px) {
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar-container {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+
+
+    .desktop-links {
+        display: none;
+
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .mobile-menu {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 1rem;
+        position: absolute;
+        top: 4rem;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .mobile-menu.open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
     }
 }

@@ -1,121 +1,264 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import t1 from "../assets/Testimonial/testimonial1.png";
+import t2 from "../assets/Testimonial/testimonial2.png";
+import t11 from "../assets/Testimonial/testimonial11.png";
+import t3 from "../assets/Testimonial/testimonial3.png";
+import t4 from "../assets/Testimonial/testimonial4.png";
+import t5 from "../assets/Testimonial/testimonial5.png";
+import t6 from "../assets/Testimonial/testimonial6.png";
+import t7 from "../assets/Testimonial/testimonial7.png";
+import t8 from "../assets/Testimonial/testimonial8.png";
+import t9 from "../assets/Testimonial/testimonial9.png";
+import t10 from "../assets/Testimonial/testimonial10.png";
 const testimonials = [
   {
     id: 1,
-    name: 'Sarah Mueller',
-    university: 'Technical University of Munich',
-    course: 'Masters in Computer Science',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
-    quote: 'Germany Wale made my dream of studying in Germany a reality. Their guidance throughout the application process was invaluable.',
+    name: "Sarah Johnson",
+    role: "Chief Technology Officer",
+    description:
+      "Leading innovation in AI and machine learning, Sarah brings over 15 years of experience in transforming technological landscapes.",
+    image: t1,
   },
   {
     id: 2,
-    name: 'Rahul Sharma',
-    university: 'University of Stuttgart',
-    course: 'Masters in Mechanical Engineering',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-    quote: 'From SOP writing to visa assistance, their comprehensive support made my journey smooth and successful.',
+    name: "Michael Chen",
+    role: "Lead Product Designer",
+    description:
+      "With a passion for user-centered design, Michael has shaped the visual identity of numerous successful digital products.",
+    image: t2,
   },
   {
     id: 3,
-    name: 'Maria Garcia',
-    university: 'Ludwig Maximilian University',
-    course: 'Masters in Business Administration',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
-    quote: 'The German language courses and cultural preparation helped me adapt quickly to life in Germany.',
+    name: "Emma Rodriguez",
+    role: "Senior Software Architect",
+    description:
+      "Emma specializes in building scalable cloud solutions and has led the development of enterprise-level applications.",
+    image: t3,
+  },
+  {
+    id: 4,
+    name: "David Kumar",
+    role: "DevOps Engineer",
+    description:
+      "David excels in streamlining deployment processes and implementing robust CI/CD pipelines for optimal efficiency.",
+    image: t4,
+  },
+  {
+    id: 5,
+    name: "Lisa Wang",
+    role: "UX Research Lead",
+    description:
+      "Lisa's expertise in user research has helped shape intuitive and accessible digital experiences for millions of users.",
+    image: t5,
+  },
+  {
+    id: 6,
+    name: "Lisa Wang",
+    role: "UX Research Lead",
+    description:
+      "Lisa's expertise in user research has helped shape intuitive and accessible digital experiences for millions of users.",
+    image: t6,
+  },
+  {
+    id: 7,
+    name: "Lisa Wang",
+    role: "UX Research Lead",
+    description:
+      "Lisa's expertise in user research has helped shape intuitive and accessible digital experiences for millions of users.",
+    image: t7,
+  },
+  {
+    id: 8,
+    name: "Lisa Wang",
+    role: "UX Research Lead",
+    description:
+      "Lisa's expertise in user research has helped shape intuitive and accessible digital experiences for millions of users.",
+    image: t8,
+  },
+  {
+    id: 9,
+    name: "Lisa Wang",
+    role: "UX Research Lead",
+    description:
+      "Lisa's expertise in user research has helped shape intuitive and accessible digital experiences for millions of users.",
+    image: t9,
+  },
+  {
+    id: 10,
+    name: "Lisa Wang",
+    role: "UX Research Lead",
+    description:
+      "Lisa's expertise in user research has helped shape intuitive and accessible digital experiences for millions of users.",
+    image: t10,
+  },
+  {
+    id: 11,
+    name: "Lisa Wang",
+    role: "UX Research Lead",
+    description:
+      "Lisa's expertise in user research has helped shape intuitive and accessible digital experiences for millions of users.",
+    image: t11,
   },
 ];
 
 const TestimonialSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => 
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
   };
 
-  const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => 
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
   };
 
+  const getVisibleCards = () => {
+    const cards = [];
+    const prev =
+      currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1;
+    const next =
+      currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1;
+
+    cards.push(testimonials[prev]);
+    cards.push(testimonials[currentIndex]);
+    cards.push(testimonials[next]);
+
+    return cards;
+  };
+
   return (
-    <div className="bg-gray-50 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-center text-gray-900 mb-12">
-          Student Success Stories
-        </h2>
-        
-        <div className="relative">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden"
-            >
-              <div className="md:flex">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-48"
-                    src={testimonials[currentIndex].image}
-                    alt={testimonials[currentIndex].name}
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="text-xl font-semibold text-blue-600">
-                    {testimonials[currentIndex].name}
+    <div className="relative min-h-screen bg-[#FFFFFF] py-20 px-4">
+      <div className="testimonial-outer-heading">
+        <p className="testimonial-heading">TESTIMONIALS</p>
+        <span className="testimonial-outer-heading-2">
+          WHAT OUR CLIENT SAYS
+        </span>
+      </div>
+      <div className="max-w-7xl mx-auto">
+        <div className="relative flex items-center justify-center min-h-[400px]">
+          {/* Navigation Buttons */}
+          <button
+            onClick={prevSlide}
+            // style={{
+            //   width: "39.5px",
+            //   height: "39.5px",
+            //   zIndex: "3",
+            //   top: "390px",
+            //   // left: "-00.5px",
+            // }}
+            className="absolute left-0 z-10 p-2 rounded-full bg-white shadow-lg hover:bg-gray-50 transition-all duration-200 group prevslide"
+          >
+            <ChevronLeft
+              className="w-6 h-6 "
+              style={{
+                color: " #FFFFFF",
+              }}
+            />
+          </button>
+
+          {/* Cards */}
+          <div className="flex items-center justify-center gap-4 px-16">
+            {getVisibleCards().map((testimonial, index) => (
+              <div
+                key={testimonial.id}
+                className={`transform transition-all duration-300 ${
+                  index === 1
+                    ? "scale-110 z-20 opacity-100"
+                    : "scale-90 opacity-50"
+                }`}
+              >
+                <div className="bg-[#FFF8F1] rounded-2xl shadow-xl p-6 w-[300px]">
+                  <div className="flex flex-col items-center">
+                    {/* Profile Image */}
+                    <div className="relative mb-4">
+                      <div className="w-24 h-24 rounded-full overflow-hidden ring-4 ring-indigo-100">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="text-center">
+                      <h3
+                        className=""
+                        style={{
+                          fontFamily: "Gilroy",
+                          fontSize: "18px",
+                          fontWeight: "700",
+                          lineHeight: "22.28px",
+                          textAlign: "center",
+                          color: "#525252",
+                          margin: "1rem",
+                        }}
+                      >
+                        {testimonial.name}
+                      </h3>
+                      <p
+                        style={{
+                          fontFamily: "Gilroy",
+                          fontSize: "12px",
+                          fontWeight: "700",
+                          lineHeight: "14.4px",
+                          textAlign: "center",
+                          color: "#525252",
+                          margin: "0.2rem",
+                        }}
+                      >
+                        {testimonial.role}
+                      </p>
+                      <p
+                        style={{
+                          fontFamily: "Gilroy",
+                          fontSize: "12px",
+                          fontWeight: "700",
+                          lineHeight: "14.4px",
+                          textAlign: "center",
+                          color: "#525252",
+                          margin: "1rem",
+                        }}
+                      >
+                        {testimonial.description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="mt-2 text-gray-600">
-                    {testimonials[currentIndex].university}
-                  </div>
-                  <div className="text-gray-500">
-                    {testimonials[currentIndex].course}
-                  </div>
-                  <p className="mt-4 text-gray-600 italic">
-                    "{testimonials[currentIndex].quote}"
-                  </p>
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
-
-          <div className="absolute top-1/2 transform -translate-y-1/2 left-0 -ml-4">
-            <button
-              onClick={handlePrevious}
-              className="bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 focus:outline-none"
-            >
-              <FaChevronLeft className="h-6 w-6 text-blue-600" />
-            </button>
-          </div>
-
-          <div className="absolute top-1/2 transform -translate-y-1/2 right-0 -mr-4">
-            <button
-              onClick={handleNext}
-              className="bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 focus:outline-none"
-            >
-              <FaChevronRight className="h-6 w-6 text-blue-600" />
-            </button>
-          </div>
-
-          <div className="flex justify-center mt-4 space-x-2">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`h-2 w-2 rounded-full ${
-                  index === currentIndex ? 'bg-blue-600' : 'bg-gray-300'
-                }`}
-              />
             ))}
           </div>
+
+          {/* Next Button */}
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 z-10 p-2 rounded-full transition-all duration-200 group nslide"
+          >
+            <ChevronRight
+              className="w-6 h-6"
+              style={{
+                color: " #FFFFFF",
+              }}
+            />
+          </button>
+        </div>
+
+        {/* Dots Indicator */}
+        <div className="flex justify-center gap-2 mt-8">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                index === currentIndex ? "bg-orange-600 w-4" : "bg-gray-300"
+              }`}
+            />
+          ))}
         </div>
       </div>
     </div>

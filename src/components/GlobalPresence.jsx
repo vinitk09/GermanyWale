@@ -49,26 +49,26 @@ const GlobalPresence = () => {
 
   return (
     <div className="container mx-auto p-4 text-center">
-      <h2 className="text-center mb-4 globalhead">Global Presence</h2>
+      <h2 className="heading-global-presence">Global Presence</h2>
 
       <div className="slider-wrapper flex justify-center">
-        <Slider {...rightSliderSettings} className="w-full max-w-5xl">
+        <Slider {...rightSliderSettings} className="w-full max-w-7xl ">
           {countryImages.map((image, index) => (
             <div
               key={index}
-              className="flex justify-center items-center"
+              className="flex justify-center items-center "
               style={{
                 background: "transparent",
               }}
             >
               <div
-                className="w-32 h-32 rounded-full shadow-flag"
+                className="w-40 h-40 shadow-flag"
                 style={{
                   backgroundImage: `url(${image})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   borderRadius: "50%",
-                  // height: "60px",
+                  overflow: "hidden", // Ensures only the circular shape is visible
                 }}
               />
             </div>
@@ -79,4 +79,25 @@ const GlobalPresence = () => {
   );
 };
 
+// const GlobalPresence = () => {
+//   return (
+//     <div className="slider-main-container">
+//       <div className="heading-global-presence">GLOBAL PRESENCE</div>
+//       <div className="slider">
+//         <div className="slide img1"></div>
+//         <div className="slide img2"></div>
+//         <div className="slide img3"></div>
+//         <div className="slide img4"></div>
+//         <div className="slide img5"></div>
+
+//         {/* Duplicate Slide */}
+//         <div className="slide img1"></div>
+//         <div className="slide img2"></div>
+//         <div className="slide img3"></div>
+//         <div className="slide img4"></div>
+//         <div className="slide img5"></div>
+//       </div>
+//     </div>
+//   );
+// };
 export default GlobalPresence;

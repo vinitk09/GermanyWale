@@ -1,9 +1,35 @@
-.same {
-    background: "linear-gradient(180deg, #EA7D06 0%, #D63715 100%)";
-    WebkitBackgroundClip: "text";
-    WebkitTextFillColor: "transparent";
-    display: "inline-block";
-    fontSize: "26.41px";
-    fontFamily: "Gilroy";
-    fontWeight: "700";
+/* General styling for text inside Programs, Services, Contact Us, and Newsletter */
+.section-text {
+    font-family: Gilroy;
+    font-size: 19.8px;
+    font-weight: 400;
+    line-height: 23.93px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+/* Ensure proper spacing for lists */
+.section-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section-text li {
+    margin-bottom: 0.5rem;
+    /* Adjust spacing for better readability */
+}
+
+.section-text a {
+    color: inherit;
+    /* Inherits text color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.section-text a:hover {
+    text-decoration: underline;
+    color: #DC4E10;
+    /* Accent hover color */
 }

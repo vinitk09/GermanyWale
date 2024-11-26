@@ -1,39 +1,386 @@
-.custom-left-margin {
-    margin-left: 2rem;
-    /* Adjust the left margin */
+.hero-container {
+    background-image: url('../assets/heroSection.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 848px;
+    position: relative;
+    background-size: cover;
+    width: 100%;
 }
 
-@media (max-width: 1024px) {
-    .custom-left-margin {
-        margin-left: 1rem;
-        /* Reduce margin on smaller screens */
-    }
-
-    .responsive-text {
-        font-size: 48px;
-        /* Smaller font size for responsiveness */
-        line-height: 60px;
-    }
-}
-
-@media (max-width: 640px) {
-    .responsive-text {
-        font-size: 36px;
-        /* Further reduction for mobile */
-        line-height: 48px;
+@media (max-width:445px) {
+    .hero-container {
+        height: 675px;
     }
 }
 
-.gradient-text {
-    font-family: "Denton Test";
-    font-size: 72px;
+.heading-h1 {
+    /* width: 802px; */
+    height: 294px;
+    top: 123px;
+    left: 51px;
+    gap: 0px;
+    opacity: 0px;
+    width: 100%;
+}
+
+.heading-h1>h1 {
+    margin-left: 3rem;
+    font-family: Gilroy;
+    font-size: 84px;
     font-weight: 700;
+    line-height: 110px;
+    /* letter-spacing: 0.01em; */
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    background: linear-gradient(93.14deg, #D12631 2.6%, #D4A853 77.38%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
+    position: relative;
+    top: 123px;
+    /* left: 51px; */
+    background-image: #222222;
+    background-clip: text;
+
+}
+
+.heading-h1>h1>.gradient-text {
+    background-image: linear-gradient(93.14deg, #D12631 2.6%, #D4A853 77.38%);
     background-clip: text;
     color: transparent;
+}
+
+@media (max-width:445px) {
+    .heading-h1 {
+        margin-left: 0rem;
+        line-height: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .heading-h1>h1 {
+        margin-left: 0rem;
+        font-family: Gilroy;
+        font-weight: 700;
+        font-size: 45px;
+        width: 100%;
+        padding: 2rem;
+        line-height: 70px;
+        top: 70px;
+    }
+}
+
+.call-for-counselling {
+    position: absolute;
+    width: 240.13px;
+    height: 47.52px;
+    top: 475.2px;
+    left: 52.13px;
+    gap: 0px;
+    border-radius: 11.09px;
+    opacity: 0px;
+    background: linear-gradient(90deg, #D63715 0%, #FF9422 100%);
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* angle: -180 deg; */
+}
+
+.call-for-counselling>.btn-call {
+
+    font-family: Gilroy-SemiBold;
+    font-size: 16.63px;
+    font-weight: 400;
+    line-height: 25.63px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    /* width: 176.08px; */
+    height: 26.35px;
+    top: 486px;
+    left: 75px;
+    gap: 0px;
+    opacity: 0px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    .call-for-counselling {
+        position: relative;
+        top: 290px;
+        /* margin: 2rem; */
+
+        /* padding: 2rem; */
+    }
+}
+
+@media (max-width:445px) {
+    .call-for-counselling {
+        position: absolute;
+        top: 390.2px;
+        left: 24.13px;
+    }
+}
+
+
+
+.small-description {
+    font-family: Gilroy;
+    font-size: 22.17px;
+    font-weight: 600;
+    line-height: 25.63px;
+    /* letter-spacing: -0.02em; */
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #969696;
+    position: absolute;
+    height: 26.35px;
+    top: 601px;
+    left: 50px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+@media (max-width:768px) {
+    .small-description {
+        position: relative;
+        top: 320px;
+        /* margin: 2rem; */
+
+        /* padding: 2rem; */
+    }
+}
+
+@media (max-width:445px) {
+    .small-description {
+        font-size: 20.17px;
+        position: absolute;
+        top: 460px;
+        left: 30px;
+        color: #969696;
+        text-shadow: 1px 1px 5px #969696;
+    }
+}
+
+.car-logo {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wraps items to the next line for smaller screens */
+    gap: 1rem;
+    justify-content: center;
+    /* Centers content on smaller screens */
+    align-items: center;
+    padding: 1rem;
+    position: absolute;
+    top: 610px;
+    left: 40px;
+    /* gap: 100px; */
+}
+
+.logo-container-b {
+    width: 80px;
+    /* Default width */
+    height: 80px;
+    /* Default height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: rgba(255, 255, 255, 0.1); */
+    /* Light background */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    /* position: absolute; */
+    display: flex;
+    top: 79%;
+    left: 0;
+    z-index: 12;
+    background: transparent;
+
+
+}
+
+.logo-container-b img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    background-color: transparent;
+    /* Applies transparency globally */
+
+
+
+}
+
+.logo-container-b:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect */
+    /* box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);s */
+}
+
+.logo-container-b img:hover {
+    opacity: 1;
+    /* Brightens the logo on hover */
+}
+
+
+.tesla {
+    width: 47.33px;
+    height: 78.27px;
+    position: absolute;
+    left: 10px;
+    top: 39px;
+}
+
+.bmw {
+    width: 59.86px;
+    height: 60.1px;
+    position: absolute;
+    left: 107px;
+    top: 48px;
+}
+
+.audi {
+    width: 91.88px;
+    height: 34.24px;
+    position: absolute;
+    left: 210px;
+    top: 60px;
+
+}
+
+.lufthansa {
+    width: 176.79px;
+    height: 31.45px;
+    position: absolute;
+    left: 348px;
+    top: 63px;
+}
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .car-logo {
+        position: relative;
+        top: 310px;
+    }
+
+    .logo-container-b {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: -120px;
+        /* left: 0px; */
+        /* z-index: 20; */
+
+    }
+
+    .tesla {
+        width: 40px;
+        height: 70px;
+        position: absolute;
+        left: -20px;
+        top: 33px;
+        left: 10px;
+
+
+    }
+
+    .bmw {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 90px;
+        top: 38px;
+    }
+
+    .audi {
+        width: 80px;
+        height: 30px;
+        position: absolute;
+        left: 175px;
+        top: 45px;
+
+    }
+
+    .lufthansa {
+        width: 240px;
+        height: 28px;
+        position: absolute;
+        left: 235px;
+        top: 45px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .car-logo {
+        gap: 0.5rem;
+        /* Reduced gap for very small screens */
+        padding: 0.5rem;
+        position: relative;
+        top: 340px;
+    }
+
+    .logo-container-b {
+        width: 60px;
+        /* Further reduced width for small screens */
+        height: 60px;
+        /* Further reduced height for small screens */
+    }
+
+    .tesla {
+        width: 35px;
+        height: 60px;
+        position: absolute;
+        left: -20px;
+        top: -123px;
+    }
+
+    .audi {
+        width: 70px;
+        height: 25px;
+        position: absolute;
+        left: 110px;
+        top: -110px;
+    }
+
+    .lufthansa {
+        width: 120px;
+        height: 25px;
+        position: absolute;
+        left: 195px;
+        top: -110px;
+
+    }
+
+    .bmw {
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        left: 40px;
+        top: -120px;
+    }
+}
+
+.small-description {
+    color: #969696;
+    opacity: 0.9;
+    /* Slightly brighter text */
+}
+
+.logo-container-b img {
+    opacity: 1;
+    /* Fully visible logos */
 }
