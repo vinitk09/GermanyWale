@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
-import TestimonialSlider from "./components/TestimonialSlider";
+// import TestimonialSlider from "./components/TestimonialSlider";
 import Footer from "./components/Footer";
 import GlobalPresence from "./components/GlobalPresence";
 import "slick-carousel/slick/slick.css";
@@ -30,12 +30,12 @@ function App() {
                   <Hero />
                   <ChooseUs />
                   <GlobalPresence />
-                  {/* <Testimonials /> */}
+                  <Testimonials />
                   {/* <Services /> */}
                   {/* <Partners /> */}
                   {/* <Universities /> */}
                   {/* <Mentor /> */}
-                  <TestimonialSlider />
+                  {/* <TestimonialSlider /> */}
                 </>
               }
             />

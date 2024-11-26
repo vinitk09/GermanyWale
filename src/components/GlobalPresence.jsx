@@ -49,7 +49,7 @@ const GlobalPresence = () => {
 
   return (
     <div className="container mx-auto p-4 text-center">
-      <h2 className="heading-global-presence">Global Presence</h2>
+      <h2 className="heading-global-presence">GLOBAL PRESENCE</h2>
 
       <div className="slider-wrapper flex justify-center">
         <Slider {...rightSliderSettings} className="w-full max-w-7xl ">
@@ -68,7 +68,7 @@ const GlobalPresence = () => {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   borderRadius: "50%",
-                  overflow: "hidden", // Ensures only the circular shape is visible
+                  overflow: "hidden",
                 }}
               />
             </div>
