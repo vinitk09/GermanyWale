@@ -4,14 +4,9 @@ import "./Transparency.css";
 const Transparency = () => {
   return (
     <div className="transaprency-main-container">
-      <div
-        className="services-heading"
-        style={{
-          marginTop: "40px",
-        }}
-      >
-        <span className="big-heading">TRANSPARENCY</span>
-        <span className="small-heading">WHY CHOOSE US</span>
+      <div className="services-heading-tr">
+        <span className="big-heading-tr">TRANSPARENCY</span>
+        <span className="small-heading-tr">WHY CHOOSE US</span>
       </div>
       <div className="transparency-img">
         <img src={tr} alt="" />

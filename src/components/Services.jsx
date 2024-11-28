@@ -190,11 +190,11 @@ const Services = () => {
         </div>
 
         <div className="div1 div2 common-div">
-          <div className="img-details-div-1 simgd2">
-            <span className="img-details-div-1-heading">
+          <div className="img-details-div-1 sim2 simgd2">
+            <span className="img-details-div-1-heading ">
               University Shortlisting
             </span>
-            <span className="img-details-div-1-description">
+            <span className="img-details-div-1-description sd2">
               50% Applications fail due to wrong choice of university. Apply to
               multiple institutions in a single application with numerous fee
               waivers and save your time
@@ -213,7 +213,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="div1 common-div">
+        <div className="div1 div3 common-div">
           <div className="img-div-1 simg3">
             <img src={ServicesImage23} alt="" />
           </div>
@@ -236,7 +236,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="div1 common-div">
+        <div className="div1 div4 common-div">
           <div className="img-details-div-1 simgd4">
             <span className="img-details-div-1-heading">Curriculum Vitae</span>
             <span className="img-details-div-1-description">
@@ -257,7 +257,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="div1 common-div">
+        <div className="div1 div5 common-div">
           <div className="img-div-1 simg5">
             <img src={ServicesImage5} alt="" />
           </div>
@@ -279,7 +279,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="div1 common-div">
+        <div className="div1 div6 common-div">
           <div className="img-details-div-1 simgd6">
             <span className="img-details-div-1-heading">
               University Application
@@ -302,7 +302,7 @@ const Services = () => {
             <img src={ServicesImage6} alt="" />
           </div>
         </div>
-        <div className="div1 common-div">
+        <div className="div1 div7 common-div">
           <div className="img-div-1 simg7">
             <img src={ServicesImage7} alt="" />
           </div>
@@ -331,12 +331,12 @@ const Services = () => {
         {/* Div 8 */}
         {/* Div 8 */}
 
-        <div className="div1 common-div">
+        <div className="div1 div8 common-div">
           <div className="img-details-div-1 simgd8">
             <span className="img-details-div-1-heading">
               Accomodation and travel assistance
             </span>
-            <span className="img-details-div-1-description">
+            <span className="img-details-div-1-description imd8">
               Struggling to find accommodation before moving to a new
               country?Not anymore. Book your secure accommodation online and
               stay stress-free.

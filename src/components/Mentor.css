@@ -5,25 +5,161 @@
     z-index: 10;
     width: 40px;
     height: 40px;
-    /* background-color: blue; */
-    /* Change to desired color */
     background: linear-gradient(180deg, #EA7D06 0%, #D63715 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    /* color: #FFFFFF; */
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 .arrow-left {
-    left: -190px;
-
-    /* Adjust spacing from the slider */
+    left: -50px;
+    /* Default spacing from the slider */
 }
 
 .arrow-right {
-    /* right: -80px; */
-    /* Adjust spacing from the slider */
+    right: -50px;
+    /* Default spacing from the slider */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .arrow {
+        width: 35px;
+        /* Slightly smaller for tablets */
+        height: 35px;
+    }
+
+    .arrow-left {
+        left: 10px;
+        /* Align to the edge of the screen */
+    }
+
+    .arrow-right {
+        right: 10px;
+        /* Align to the edge of the screen */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .arrow {
+        width: 30px;
+        /* Even smaller for mobile */
+        height: 30px;
+        position: relative;
+    }
+
+    .arrow-left {
+        left: 5px;
+        /* Adjusted spacing for mobile */
+    }
+
+    .arrow-right {
+        right: 5px;
+        /* Adjusted spacing for mobile */
+    }
+}
+
+.services-heading-m {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.big-heading-m {
+    font-family: Gilroy-ExtraBold;
+    font-size: 134.99px;
+    font-weight: 900;
+    line-height: 196.87px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFD9B17A;
+
+}
+
+.small-heading-m {
+    font-family: Gilroy;
+    font-size: 66.56px;
+    font-weight: 600;
+    line-height: 87.07px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    position: relative;
+
+    height: 98px;
+    /* top: -98.35px; */
+    color: #D63715;
+    gap: 0px;
+    opacity: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-heading-m {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    /* Space between headings */
+    margin: 20px 0;
+    /* Vertical spacing for the section */
+}
+
+.big-heading-m {
+    font-family: "Gilroy-ExtraBold";
+    font-size: 10vw;
+    /* Scales with the viewport width */
+    font-weight: 900;
+    line-height: 1.2em;
+    /* Optimized for readability */
+    letter-spacing: 0.01em;
+    color: rgba(255, 217, 177, 0.7);
+    /* Slightly transparent for style */
+}
+
+.small-heading-m {
+    font-family: "Gilroy";
+    font-size: 50px;
+    /* Scales with viewport width */
+    font-weight: 600;
+    /* line-height: 98px; */
+    /* Slightly looser for readability */
+    color: #d63715;
+    /* Bright and noticeable */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .big-heading-m {
+        font-size: 74px;
+        /* Smaller font for tablets */
+        line-height: 1.1em;
+    }
+
+    .small-heading-m {
+        font-size: 4vw;
+        /* Adjusted font size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .big-heading-m {
+        font-size: 13.5vw;
+        /* Compact size for phones */
+        line-height: 1.2em;
+    }
+
+    .small-heading-m {
+        font-size: 8.5vw;
+        position: relative;
+        top: -75px;
+    }
 }

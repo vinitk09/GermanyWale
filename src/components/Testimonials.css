@@ -1,7 +1,9 @@
 .next-slide-arrow {
 
 
-    /* position: absolute; */
+    position: relative;
+    left: 12px;
+    right: 12px;
     /* left: 1340.5px; */
     background: linear-gradient(180deg, #EA7D06 0%, #D63715 100%);
     borderRadius: 50%;
@@ -13,9 +15,9 @@
 }
 
 .next-arrow {
-    /* width: 15.53px;
-    height: 15.53px; */
-    /* position: relative; */
+    width: 15.53px;
+    height: 15.53px;
+    position: relative;
 }
 
 @media (max-width:768px) {
@@ -232,6 +234,9 @@
     justify-content: center;
     cursor: pointer;
     color: white;
+    position: relative;
+    left: 0;
+    right: 0;
     transition: all 0.3s ease;
     z-index: 3;
     box-shadow: 0 4px 15px rgba(232, 76, 36, 0.3);
@@ -243,7 +248,8 @@
 }
 
 .nav-button svg {
-    width: 30px;
+
+    width: 80px;
     height: 30px;
     filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
 }
@@ -266,7 +272,7 @@
 
 @media (max-width: 768px) {
     .testimonial-heading {
-        font-size: 4rem;
+        font-size: 84px;
     }
 
     .testimonial-outer-heading-2 {
@@ -313,22 +319,35 @@
 
     /* width: 29.5px;
     height: 29.5px; */
-    position: absolute;
-    left: -1.5px;
+    position: relative;
+    left: 60px;
     background: linear-gradient(180deg, #ea7d06 0%, #d63715 100%);
     border-radius: 50%;
     /* Makes the button circular */
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     border: none;
     cursor: pointer;
 
 }
 
+.next {
+    position: relative;
+    left: -60px;
+    background: linear-gradient(180deg, #ea7d06 0%, #d63715 100%);
+    border-radius: 50%;
+    /* Makes the button circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
 .svg-arrow-prev {
-    width: 15.53px;
-    height: 15.53px;
+    /* width: 15.53px;
+    height: 15.53px; */
     position: relative;
 
 }
@@ -352,11 +371,11 @@
         position: relative;
         top: 18px;
         font-family: Gilroy;
-        font-size: 24.56px;
+        font-size: 44.56px;
         font-weight: 600;
         line-height: 62px;
         letter-spacing: 0.01em;
-        text-align: left;
+        text-align: center;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
         color: #D63715;
@@ -384,5 +403,35 @@
     .testimonial-heading {
         font-size: 46px;
         font-weight: 400;
+    }
+
+    .prev {
+
+        /* width: 29.5px;
+        height: 29.5px; */
+        position: relative;
+        left: 80.5px;
+        background: linear-gradient(180deg, #ea7d06 0%, #d63715 100%);
+        border-radius: 50%;
+        /* Makes the button circular */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+
+    }
+
+    .next {
+        position: relative;
+        left: -80.5px;
+        background: linear-gradient(180deg, #ea7d06 0%, #d63715 100%);
+        border-radius: 50%;
+        /* Makes the button circular */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
     }
 }

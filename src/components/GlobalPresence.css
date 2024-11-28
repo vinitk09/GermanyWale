@@ -93,58 +93,6 @@
     }
 }
 
-@media (max-width: 468px) {
-    .slider-main-container {
-        height: 400px;
-    }
-
-    .heading-global-presence {
-        font-family: Gilroy-SemiBold;
-        font-size: 36.56px;
-        font-weight: 400;
-        letter-spacing: 0.01em;
-        text-align: center;
-        color: #D63715;
-    }
-
-    .slider {
-        display: flex;
-        align-items: center;
-        gap: 70px;
-        /* overflow: hidden; */
-        /* Hide slides outside view */
-        position: relative;
-        width: 100%;
-        height: 250px;
-    }
-
-    .slides-container {
-        display: flex;
-        animation: slideAnimation 16s linear infinite;
-    }
-
-    .slide {
-        width: 112px;
-        height: 112px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        border-radius: 50%;
-        box-shadow: 6px 6px 32px #EA7D06;
-    }
-
-    /* Keyframes for seamless sliding */
-    @keyframes slideAnimation {
-        0% {
-            transform: translateX(100%);
-        }
-
-        100% {
-            transform: translateX(-400%);
-        }
-    }
-}
-
 @media (max-width:768px) {
     .slider-main-container {
         height: 400px;
@@ -196,4 +144,56 @@
         }
     }
 
+}
+
+@media (max-width: 468px) {
+    .slider-main-container {
+        height: 400px;
+    }
+
+    .heading-global-presence {
+        font-family: Gilroy-SemiBold;
+        font-size: 34.56px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        text-align: center;
+        color: #D63715;
+    }
+
+    .slider {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        /* overflow: hidden; */
+        /* Hide slides outside view */
+        position: relative;
+        width: 100%;
+        height: 250px;
+    }
+
+    .slides-container {
+        display: flex;
+        animation: slideAnimation 16s linear infinite;
+    }
+
+    .slide {
+        width: 112px;
+        height: 112px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        box-shadow: 6px 6px 32px #EA7D06;
+    }
+
+    /* Keyframes for seamless sliding */
+    @keyframes slideAnimation {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-400%);
+        }
+    }
 }

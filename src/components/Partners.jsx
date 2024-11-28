@@ -7,140 +7,44 @@ import remitoutLogo from "../assets/remitout.png";
 import hdfcCredilaLogo from "../assets/HDFC.png";
 import commerzbankLogo from "../assets/commerzanebank.png";
 import bajajAllianzLogo from "../assets/bajajalliance.png";
+import "./Partners.css";
 
 const Partners = () => {
   return (
-    <div
-      className="relative flex flex-col items-center"
-      style={{
-        background: "#282727",
-        color: "#FFFFFF",
-        height: "440px",
-      }}
-    >
+    <div className="partners-container">
       {/* Top Section: Heading and Handshake Image */}
-      <div className="flex flex-col lg:flex-row items-center justify-evenly w-full ">
+      <div className="partners-header">
         {/* Heading */}
-        <h2
-          className=" text-4xl text-center"
-          style={{
-            // marginBottom: "1rem",
-            // marginLeft: "10rem",
-
-            fontFamily: "Gilroy-Bold",
-            fontSize: "64px",
-            fontHeight: "400",
-            lineHeight: "60.95px",
-            letterSpacing: "-0.02em",
-            textAlign: "center",
-          }}
-        >
-          OUR PARTNERS
-        </h2>
+        <h2 className="partners-title">OUR PARTNERS</h2>
 
         {/* Handshake Image */}
-        <img
-          src={handshakeImage}
-          alt="Handshake"
-          style={{
-            width: "449px",
-            height: "209px",
-            objectFit: "cover",
-          }}
-        />
+        <img src={handshakeImage} alt="Handshake" className="handshake-image" />
       </div>
 
       {/* Wave Pattern */}
-      <img
-        src={wavePatternImage}
-        alt="Wave Pattern"
-        className="w-full"
-        style={{
-          height: "156.52px",
-        }}
-      />
+      <img src={wavePatternImage} alt="Wave Pattern" className="wave-pattern" />
 
       {/* Partner Logos Section */}
-      <div
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 px-8  "
-        style={{
-          width: "1200px",
-          position: "relative",
-          top: "-68.2px",
-        }}
-      >
+      <div className="partners-logos">
         {/* Axis Bank */}
-        <img
-          src={axisBankLogo}
-          alt="Axis Bank"
-          style={{
-            width: "79.86px",
-            height: "79.86px",
-            objectFit: "contain",
-          }}
-        />
+        <img src={axisBankLogo} alt="Axis Bank" className="partner-logo" />
         {/* Flywire */}
-        <img
-          src={flywireLogo}
-          alt="Flywire"
-          style={{
-            position: "relative",
-            top: "19px",
-            width: "108.16px",
-            height: "33.46px",
-            objectFit: "contain",
-          }}
-        />
+        <img src={flywireLogo} alt="Flywire" className="partner-logo" />
         {/* RemitOut */}
-        <img
-          src={remitoutLogo}
-          alt="RemitOut"
-          style={{
-            position: "relative",
-            top: "7px",
-            width: "104.16px",
-            height: "53.46px",
-
-            // gap: 0px;
-            // opacity: 0px;
-          }}
-        />
+        <img src={remitoutLogo} alt="RemitOut" className="partner-logo" />
         {/* HDFC Credila */}
         <img
           src={hdfcCredilaLogo}
           alt="HDFC Credila"
-          style={{
-            width: "112.2px",
-            height: "112.46px",
-            position: "relative",
-            top: "-22px", // Changed from 0 to make it visible
-            objectFit: "contain", // Ensures the image scales properly
-          }}
+          className="partner-logo"
         />
         {/* Commerzbank */}
-        <img
-          src={commerzbankLogo}
-          alt="Commerzbank"
-          style={{
-            width: "177.57px",
-            height: "54.46px",
-            objectFit: "contain",
-            position: "relative",
-            top: "7px",
-          }}
-        />
+        <img src={commerzbankLogo} alt="Commerzbank" className="partner-logo" />
         {/* Bajaj Allianz */}
         <img
           src={bajajAllianzLogo}
           alt="Bajaj Allianz"
-          style={{
-            width: "246.18px",
-            height: "33.46px",
-            objectFit: "contain",
-            position: "relative",
-            top: "17px",
-            left: "30px",
-          }}
+          className="partner-logo"
         />
       </div>
     </div>

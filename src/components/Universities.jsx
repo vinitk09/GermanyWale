@@ -110,11 +110,11 @@ const Universities = () => {
   const secondRow = universities.slice(Math.ceil(universities.length / 2));
 
   return (
-    <div className="relative py-12 min-h-screen">
+    <div className="relative py-8 ">
       {/* Background and Heading */}
-      <div className="services-heading">
-        <span className="big-heading">UNIVERSITIES</span>
-        <span className="small-heading">TOP UNIVERSITIES</span>
+      <div className="services-heading-u">
+        <span className="big-heading-u">UNIVERSITIES</span>
+        <span className="small-heading-u">TOP UNIVERSITIES</span>
       </div>
 
       {/* Infinite Carousel */}

@@ -1,79 +1,136 @@
+/* General container */
 .transaprency-main-container {
     position: relative;
-    /* Needed for the pseudo-element */
+    overflow: hidden;
+    /* Ensures pseudo-elements stay contained */
+    padding: 20px;
+    /* Adds some spacing for smaller screens */
 }
 
-.transaprency-main-container::before {
-    content: '';
-    position: absolute;
-    bottom: -40px;
-    /* Adjust to place the quadrant at the bottom-left */
-    left: -230px;
-    /* Centers the quadrant correctly */
-    width: 380px;
-    height: 288px;
-    background: linear-gradient(270deg, rgba(255, 148, 34, 0.6) 0%, rgba(214, 55, 21, 0.6) 100%);
-    /* border-radius: 0 100% 100% 0; */
-    transform: rotate(360deg);
-    /* Makes the shape a quarter ellipse */
-    opacity: 1;
-    /* Fully visible, adjust as needed */
-    backdrop-filter: blur(100px);
-    /* Adds blur effect */
-    z-index: 1;
-    /* Places the shape behind the content */
+/* Headings */
+.services-heading-tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
 }
 
+.big-heading-tr {
+    font-family: "Gilroy-ExtraBold";
+    font-size: 134px;
+    /* Responsive font size */
+    font-weight: 900;
+    line-height: 1.2em;
+    /* Adjusts line spacing */
+    letter-spacing: 0.01em;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(255, 217, 177, 0.48);
+}
 
-.transparency-img {
-    background-repeat: no-repeat;
-    object-fit: contain;
-    background-size: contain;
+.small-heading-tr {
+    font-family: "Gilroy";
+    font-size: 64px;
+    /* Responsive font size */
+    font-weight: 600;
+    line-height: 1.5em;
+    letter-spacing: 0.01em;
+    color: #D63715;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2px auto;
-    width: 1312px;
-    height: 562.52px;
-    top: 301px;
-    left: 100px;
-    gap: 0px;
-    border: 0.31px;
-    opacity: 0px;
-}
-
-
-.transaprency-main-container {
+    margin-top: -20px;
     position: relative;
-    /* Required for pseudo-elements */
-    overflow: hidden;
-    /* Ensures shadow doesn't overflow the container */
+    top: -80px;
+    /* Adjust spacing between headings */
 }
 
+/* Pseudo-element for background shape */
 .transaprency-main-container::before {
     content: '';
     position: absolute;
-    bottom: -160px;
-    /* Positioning for the shadow */
-    left: -250px;
-    /* Adjusts the placement at the bottom-left */
-    width: 380px;
-    height: 350px;
-    /* Makes the shape a circle */
+    bottom: -100px;
+    /* Adjust position dynamically */
+    left: -150px;
+    /* Adjust for smaller screens */
+    width: 20vw;
+    /* Scale width proportionally */
+    height: 20vw;
+    /* Scale height proportionally */
     background: linear-gradient(270deg,
             rgba(255, 148, 34, 0.6) 0%,
             rgba(214, 55, 21, 0.6) 100%);
-    border-radius: 100%;
-    /* Makes it circular */
+    border-radius: 50%;
+    /* Keeps it circular */
     transform: rotate(30deg);
-    /* Rotates the circle to show a portion */
-    box-shadow: 0 0 120px rgba(255, 148, 34, 0.6),
-        0 0 180px rgba(214, 55, 21, 0.6);
-    /* Adds glowing box shadow */
-    backdrop-filter: blur(0px);
-    /* Adds blur effect */
+    box-shadow: 0 0 80px rgba(255, 148, 34, 0.6),
+        0 0 120px rgba(214, 55, 21, 0.6);
     opacity: 1;
-    /* Fully visible */
     z-index: 1;
-    /* Ensures it's below content */
+    /* Keeps it behind other elements */
+}
+
+/* Transparency image */
+.transparency-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 90%;
+    /* Adjust width to fit smaller screens */
+    max-width: 1312px;
+    /* Maintain maximum size on larger screens */
+    height: auto;
+    /* Maintain aspect ratio */
+    position: relative;
+    z-index: 2;
+    /* Keeps the image above the pseudo-element */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .big-heading-tr {
+        font-size: 78px;
+        /* line-height: 1.1em; */
+    }
+
+    .small-heading-tr {
+        font-size: 48px;
+        position: relative;
+        top: -50px;
+    }
+
+    .transparency-img {
+        width: 95%;
+        /* Make the image fill more space on smaller screens */
+    }
+
+    .transaprency-main-container::before {
+        width: 170px;
+        height: 170px;
+        bottom: -40px;
+        /* Adjust placement for smaller screens */
+        left: -100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .big-heading-tr {
+        font-size: 11.5vw;
+        line-height: 2.2em;
+    }
+
+    .small-heading-tr {
+        position: relative;
+        top: -44px;
+        font-size: 8vw;
+    }
+
+    .transaprency-main-container::before {
+        width: 35vw;
+        height: 35vw;
+        bottom: -50px;
+        left: -70px;
+    }
 }

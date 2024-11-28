@@ -16,6 +16,7 @@ import Mentor from "./components/Mentor";
 import ChooseUs from "./components/ChooseUs";
 import "./assets/fonts.css";
 import Transparency from "./components/Transparency";
+import MentorSection from "./components/mentor/MentorSection";
 
 function App() {
   return (
@@ -36,7 +37,8 @@ function App() {
                   <Partners />
                   <Transparency />
                   <Universities />
-                  <Mentor />
+                  {/* <Mentor /> */}
+                  <MentorSection />
                   {/* <TestimonialSlider /> */}
                 </>
               }

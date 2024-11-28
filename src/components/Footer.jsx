@@ -9,6 +9,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import "./Footer.css";
+import f1 from "../assets/footer.png";
 
 const Footer = () => {
   return (
@@ -32,12 +33,42 @@ const Footer = () => {
               Programs
             </h3>
 
-            <p className="text-sm program-text">
-              Your trusted partner for pursuing higher education in Germany. We
-              provide end-to-end consultation services to make your dream of
-              studying in Germany a reality.
-            </p>
-            <div className="mt-4 flex space-x-4">
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/about"
+                  className="hover:text-orange-400 transition-colors"
+                >
+                  Bachelor in Germany{" "}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="hover:text-orange-400 transition-colors"
+                >
+                  Masters in Germany
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/universities"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  PhD in Germany{" "}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/german-language"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  MBA in Germany{" "}
+                </Link>
+              </li>
+              <li></li>
+            </ul>
+            {/* <div className="mt-4 flex space-x-4">
               <a href="#" className="hover:text-orange-400 transition-colors">
                 <FaFacebook size={20} />
               </a>
@@ -50,7 +81,7 @@ const Footer = () => {
               <a href="#" className="hover:text-orange-400 transition-colors">
                 <FaLinkedin size={20} />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -125,19 +156,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <FaPhoneAlt className="mr-2" />
-                <span>+49 123 456 7890</span>
+                <span>Home</span>
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="mr-2" />
-                <span>info@germanywale.com</span>
+                <span>About</span>
               </li>
               <li className="flex items-start">
                 <FaMapMarkerAlt className="mr-2 mt-1" />
-                <span>
-                  123 Business Street,
-                  <br />
-                  Berlin 10115, Germany
-                </span>
+                <span>Contact</span>
               </li>
             </ul>
           </div>
@@ -158,10 +185,7 @@ const Footer = () => {
             >
               Newsletter
             </h3>
-            <p className="text-sm mb-4">
-              Subscribe to our newsletter for updates and tips about studying in
-              Germany.
-            </p>
+
             <form className="space-y-2">
               <input
                 type="email"
@@ -170,36 +194,65 @@ const Footer = () => {
                 style={{
                   // width: "382.87px",
                   height: "61.89px",
-                  top: "124.6px",
-                  left: "668.38px",
-
+                  width: "264.21px",
+                  // margingLeft: "32px",
                   borderRadius: "13.2px ",
-                  border: "0.83px 0px 0px 0px",
+                  // border: "0.83px 0px 0px 0px",
                 }}
               />
-              <button
-                type="submit"
-                className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-orange-700 transition-colors"
+              <div
+                className="mt-4 flex space-x-4"
                 style={{
-                  width: "164.21px",
-                  height: "61.89px",
-                  top: "124.6px",
-                  left: "1060.33px",
-                  borderRadius: "13.2px",
-                  backgroundColor: "#DC4E10",
-                  fontSize: "26.93px",
-                  fontWeight: "600",
-                  fontFamily: "Gilroy",
+                  display: "flex",
+                  alignItems: "center",
                 }}
               >
-                Subscribe
-              </button>
+                <a href="#" className="hover:text-orange-400 transition-colors">
+                  <FaFacebook size={20} />
+                </a>
+                <a href="#" className="hover:text-orange-400 transition-colors">
+                  <FaTwitter size={20} />
+                </a>
+                <a href="#" className="hover:text-orange-400 transition-colors">
+                  <FaInstagram size={20} />
+                </a>
+                <a href="#" className="hover:text-orange-400 transition-colors">
+                  <FaLinkedin size={20} />
+                </a>
+                <button
+                  type="submit"
+                  className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-orange-700 transition-colors"
+                  style={{
+                    width: "124.21px",
+                    height: "51.89px",
+                    // top: "124.6px",
+                    position: "relative",
+                    left: "10.33px",
+                    borderRadius: "13.2px",
+                    backgroundColor: "#DC4E10",
+                    fontSize: "20.93px",
+                    fontWeight: "600",
+                    fontFamily: "Gilroy",
+                    color: "#FFFFFF",
+                  }}
+                >
+                  Subscribe
+                </button>
+              </div>
             </form>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t border-gray-800">
+          <img
+            src={f1}
+            style={{
+              width: "255.8px",
+              height: "64.36px",
+              objectFit: "cover",
+            }}
+          />
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm">
               © {new Date().getFullYear()} Germany Wale. All rights reserved.

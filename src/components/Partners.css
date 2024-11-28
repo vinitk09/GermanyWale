@@ -1,0 +1,137 @@
+/* Container styles */
+.partners-container {
+    background: #282727;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    height: 427px;
+}
+
+/* Top Section */
+.partners-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.partners-title {
+    font-family: "Gilroy-Bold";
+    font-size: 48px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.handshake-image {
+    width: 80%;
+    max-width: 400px;
+    object-fit: cover;
+}
+
+/* Wave Pattern */
+.wave-pattern {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* Logos Section */
+.partners-logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns on small screens */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.partner-logo {
+    width: auto;
+    max-height: 80px;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+
+/* Large screens (desktops) */
+@media screen and (min-width: 1024px) {
+    .partners-header {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .partners-title {
+        font-size: 64px;
+    }
+
+    .handshake-image {
+        max-width: 449px;
+        height: auto;
+    }
+
+    .partners-logos {
+        position: relative;
+        top: -100px;
+        display: flex;
+        /* grid-template-columns: repeat(6, 1fr); */
+        /* 6 columns */
+    }
+
+    .partner-logo {
+        position: relative;
+        top: -45px;
+        height: 50px;
+        width: auto;
+    }
+}
+
+
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+    .partners-container {
+        background: #282727;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+        height: 567px;
+    }
+
+    .partner-logo {
+        position: relative;
+        top: -45px;
+        height: 40px;
+        width: 50%;
+    }
+
+
+}
+
+@media (max-width:468px) {
+    .partners-container {
+        background: #282727;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+        height: 467px;
+    }
+
+    .partner-logo {
+        position: relative;
+        top: -45px;
+        height: 30px;
+        width: auto;
+    }
+}

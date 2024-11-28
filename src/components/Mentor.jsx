@@ -29,14 +29,14 @@ const Arrow = ({ direction, onClick }) => {
       style={{
         cursor: "pointer",
         zIndex: 10, // Ensure it stays on top
-        position: "absolute",
-        top: "50%",
-        right: "50%",
-        left: "89.1%",
+        // position: "absolute",
+        // top: "50%",
+        // right: "50%",
+        // left: "89.1%",
         // left: "0",
         // Center vertically
-        transform: "translateY(-50%)",
-        [direction === "left" ? "left" : "right"]: "10px", // Position based on direction
+        // transform: "translateY(-50%)",
+        // [direction === "left" ? "left" : "right"]: "10px", // Position based on direction
         width: "40px", // Set width of the background
         height: "40px", // Set height of the background
         background: "linear-gradient(270deg, #FF9422 0%, #D63715 100%)", // Gradient background
@@ -87,7 +87,7 @@ const MentorCard = ({
           alt={name}
           className="rounded-full border-white object-cover"
           style={{
-            width: "129px",
+            // width: "129px",
             height: "129px",
           }}
         />
@@ -118,7 +118,7 @@ const MentorCard = ({
           {role}
         </p>
       </div>
-      <div className="px-6">
+      <div className="">
         <div
           className="flex justify-between items-center space-x-4" // Add spacing between sections
         >
@@ -130,7 +130,7 @@ const MentorCard = ({
                 fontFamily: "Gilroy",
                 fontWeight: "500",
                 fontSize: "8.71px",
-                lineHeight: "10.57px",
+                // lineHeight: "10.57px",
                 color: "#969696",
               }}
             >
@@ -276,9 +276,9 @@ const Mentor = () => {
 
   return (
     <div className="relative py-16  bg-transparent min-h-screen">
-      <div className="services-heading">
-        <span className="big-heading">OUR MENTOR</span>
-        <span className="small-heading">BEST MENTORS</span>
+      <div className="services-heading-m">
+        <span className="big-heading-m">OUR MENTOR</span>
+        <span className="small-heading-m">BEST MENTORS</span>
       </div>
       <div
         className="relative max-w-7xl mx-auto   sm:px-6 lg:px-8"

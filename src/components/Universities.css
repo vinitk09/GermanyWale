@@ -152,37 +152,70 @@
     }
 }
 
-.services-heading {
+.services-heading-u {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    /* Adds space between the headings */
+    margin: 20px 0;
+    /* Adds spacing around the heading container */
 }
 
-.services-heading>.big-heading {
-    font-family: Gilroy-ExtraBold;
-    font-size: 134.99px;
-    font-weight: 400;
-    line-height: 196.87px;
+.big-heading-u {
+    font-family: "Gilroy-ExtraBold";
+    font-size: 134px;
+    /* Responsive font size based on viewport width */
+    font-weight: 900;
+    line-height: 1.2em;
+    /* Adjust line height */
     letter-spacing: 0.01em;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
+    color: rgba(255, 217, 177, 0.7);
+    /* Slightly transparent for a softer look */
 }
 
-.small-heading {
+.small-heading-u {
+    font-family: "Gilroy";
+    font-size: 66px;
+    /* Responsive font size for smaller heading */
+    font-weight: 600;
+    line-height: 1.5em;
+    color: #d63715;
+    position: relative;
+    top: -100px;
+    /* Distinctive color for the smaller heading */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .big-heading-u {
+        font-size: 70px;
+        /* Scale down for tablets */
+        line-height: 1.1em;
+    }
+
+    .small-heading-u {
+        font-size: 44px;
+        position: relative;
+        top: -65px;
+        /* letter-spacing: 0.03em; */
+    }
+}
+
+@media screen and (max-width: 480px) {
 
 
-    height: 98px;
-    top: -108.35px;
-    color: #D63715;
-    font-family: Gilroy-SemiBold;
-    font-size: 66.56px;
-    font-weight: 400;
-    line-height: 129px;
-    letter-spacing: 0.01em;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+    .big-heading-u {
+        font-size: 12.5vw;
+        /* Further scale down for phones */
+        line-height: 1.2em;
+    }
+
+    .small-heading-u {
+        position: relative;
+        top: -44px;
+        font-size: 7.5vw;
+        /* Smaller text for compact view */
+    }
 }
