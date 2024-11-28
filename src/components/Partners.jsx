@@ -15,20 +15,24 @@ const Partners = () => {
       style={{
         background: "#282727",
         color: "#FFFFFF",
+        height: "440px",
       }}
     >
       {/* Top Section: Heading and Handshake Image */}
-      <div
-        className="flex flex-col lg:flex-row items-center justify-between w-full px-8 py-8"
-        style={{
-          maxWidth: "1287px",
-        }}
-      >
+      <div className="flex flex-col lg:flex-row items-center justify-evenly w-full ">
         {/* Heading */}
         <h2
-          className="font-bold text-4xl text-left"
+          className=" text-4xl text-center"
           style={{
-            marginBottom: "1rem",
+            // marginBottom: "1rem",
+            // marginLeft: "10rem",
+
+            fontFamily: "Gilroy-Bold",
+            fontSize: "64px",
+            fontHeight: "400",
+            lineHeight: "60.95px",
+            letterSpacing: "-0.02em",
+            textAlign: "center",
           }}
         >
           OUR PARTNERS
@@ -39,8 +43,8 @@ const Partners = () => {
           src={handshakeImage}
           alt="Handshake"
           style={{
-            maxWidth: "50%",
-            height: "auto",
+            width: "449px",
+            height: "209px",
             objectFit: "cover",
           }}
         />
@@ -52,20 +56,17 @@ const Partners = () => {
         alt="Wave Pattern"
         className="w-full"
         style={{
-          width: "1172.91px",
-          height: "146.52px",
-
-          opacity: "0.1px",
-
-          // marginBottom: "0rem",
+          height: "156.52px",
         }}
       />
 
       {/* Partner Logos Section */}
       <div
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 px-8 pb-8"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 px-8  "
         style={{
-          maxWidth: "1287px",
+          width: "1200px",
+          position: "relative",
+          top: "-68.2px",
         }}
       >
         {/* Axis Bank */}
@@ -75,6 +76,7 @@ const Partners = () => {
           style={{
             width: "79.86px",
             height: "79.86px",
+            objectFit: "contain",
           }}
         />
         {/* Flywire */}
@@ -82,8 +84,10 @@ const Partners = () => {
           src={flywireLogo}
           alt="Flywire"
           style={{
+            position: "relative",
+            top: "19px",
             width: "108.16px",
-            height: "73.46px",
+            height: "33.46px",
             objectFit: "contain",
           }}
         />
@@ -92,13 +96,11 @@ const Partners = () => {
           src={remitoutLogo}
           alt="RemitOut"
           style={{
-            // width: "112.2px",
-            // height: "112.86px",
-            objectFit: "contain",
+            position: "relative",
+            top: "7px",
             width: "104.16px",
-            height: "73.46px",
-            top: "4918.2px",
-            left: "426.35px",
+            height: "53.46px",
+
             // gap: 0px;
             // opacity: 0px;
           }}
@@ -109,11 +111,9 @@ const Partners = () => {
           alt="HDFC Credila"
           style={{
             width: "112.2px",
-            height: "83.46px",
-            // position: "absolute", // Needed for top and left positioning
-            top: "4883.22px", // Adjusted as per requirement
-            left: "562.04px", // Adjusted as per requirement
-            opacity: 1, // Changed from 0 to make it visible
+            height: "112.46px",
+            position: "relative",
+            top: "-22px", // Changed from 0 to make it visible
             objectFit: "contain", // Ensures the image scales properly
           }}
         />
@@ -123,10 +123,10 @@ const Partners = () => {
           alt="Commerzbank"
           style={{
             width: "177.57px",
-            height: "73.46px",
+            height: "54.46px",
             objectFit: "contain",
-            top: "4916.22px", // Adjusted as per requirement
-            left: "698.04px",
+            position: "relative",
+            top: "7px",
           }}
         />
         {/* Bajaj Allianz */}
@@ -135,10 +135,11 @@ const Partners = () => {
           alt="Bajaj Allianz"
           style={{
             width: "246.18px",
-            height: "73.46px",
+            height: "33.46px",
             objectFit: "contain",
-            top: "4923.22px", // Adjusted as per requirement
-            left: "562.04px",
+            position: "relative",
+            top: "17px",
+            left: "30px",
           }}
         />
       </div>

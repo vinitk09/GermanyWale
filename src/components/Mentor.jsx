@@ -21,22 +21,40 @@ import p3 from "../assets/Mentor/profile3.png";
 import p4 from "../assets/Mentor/profile4.png";
 import p5 from "../assets/Mentor/profile5.png";
 import p6 from "../assets/Mentor/profile6.png";
-
-const Arrow = ({ className, style, onClick, direction }) => {
+import "./Mentor.css";
+const Arrow = ({ direction, onClick }) => {
   return (
     <div
-      className={`${className} ${
-        direction === "left" ? "left" : "right-2"
-      } bg-orange-500  text-white rounded-full flex items-center justify-center shadow-lg`}
-      style={{
-        ...style,
-        top: "50%", // Center vertically
-        transform: "translateY(-50%)", // Ensure proper centering
-        zIndex: 10, // Ensure it is above other elements
-      }}
       onClick={onClick}
+      style={{
+        cursor: "pointer",
+        zIndex: 10, // Ensure it stays on top
+        position: "absolute",
+        top: "50%",
+        right: "50%",
+        left: "89.1%",
+        // left: "0",
+        // Center vertically
+        transform: "translateY(-50%)",
+        [direction === "left" ? "left" : "right"]: "10px", // Position based on direction
+        width: "40px", // Set width of the background
+        height: "40px", // Set height of the background
+        background: "linear-gradient(270deg, #FF9422 0%, #D63715 100%)", // Gradient background
+        borderRadius: "50%", // Make it circular
+        display: "flex", // Center the arrow inside
+        alignItems: "center",
+        justifyContent: "center",
+        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.25)", // Optional: Add shadow for depth
+      }}
     >
-      {direction === "left" ? "<" : ">"}
+      <span
+        style={{
+          fontSize: "20px", // Arrow size
+          color: "#FFFFFF", // Arrow color
+        }}
+      >
+        {direction === "left" ? "◄" : "►"}
+      </span>
     </div>
   );
 };
@@ -51,33 +69,120 @@ const MentorCard = ({
   image,
 }) => {
   return (
-    <div className="max-w-xs bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-      <div className="bg-gradient-to-r from-orange-500 to-red-500 h-20"></div>
+    <div
+      className="relative max-w-xs rounded-xl shadow-lg overflow-hidden border flex flex-col items-center justify-between"
+      style={{
+        height: "408px",
+        background: "#FFFFFF",
+        width: "376px",
+      }}
+    >
+      <div
+        className="bg-gradient-to-r from-orange-500 to-red-500 w-full"
+        style={{ height: "103px" }}
+      ></div>
       <div className="flex justify-center -mt-14">
         <img
           src={image}
           alt={name}
-          className="w-28 h-28 rounded-full border-4 border-white object-cover"
+          className="rounded-full border-white object-cover"
+          style={{
+            width: "129px",
+            height: "129px",
+          }}
         />
       </div>
       <div className="text-center px-6 py-4">
-        <h2 className="text-lg font-bold text-gray-900">{name}</h2>
-        <p className="text-sm text-gray-500">{role}</p>
+        <h2
+          className=""
+          style={{
+            fontFamily: "Gilroy",
+            fontWeight: "700",
+            fontSize: "24.3px",
+            lineHeight: "30.08px",
+            color: "#000000",
+          }}
+        >
+          {name}
+        </h2>
+        <p
+          className=""
+          style={{
+            fontFamily: "Gilroy",
+            fontWeight: "600",
+            fontSize: "10.8px",
+            lineHeight: "13.23px",
+            color: "#969696",
+          }}
+        >
+          {role}
+        </p>
       </div>
       <div className="px-6">
-        <div className="flex justify-between items-center text-sm mb-4">
+        <div
+          className="flex justify-between items-center space-x-4" // Add spacing between sections
+        >
+          {/* Working At Section */}
           <div className="flex flex-col items-center">
-            <p className="text-gray-500 underline">Working at</p>
-            <img src={companyLogo} alt={company} className="h-6 mt-2" />
+            <p
+              className=""
+              style={{
+                fontFamily: "Gilroy",
+                fontWeight: "500",
+                fontSize: "8.71px",
+                lineHeight: "10.57px",
+                color: "#969696",
+              }}
+            >
+              Working at
+            </p>
+            <img
+              src={companyLogo}
+              alt={company}
+              className=""
+              style={{
+                height: "30px", // Set desired height
+                width: "80px", // Set desired width
+                objectFit: "contain", // Ensure the image maintains aspect ratio
+              }}
+            />
           </div>
+
+          {/* Studied At Section */}
           <div className="flex flex-col items-center">
-            <p className="text-gray-500 underline">Studied at</p>
-            <img src={universityLogo} alt={university} className="h-6 mt-2" />
+            <p
+              className=""
+              style={{
+                fontFamily: "Gilroy",
+                fontWeight: "500",
+                fontSize: "8.71px",
+                lineHeight: "10.57px",
+                color: "#969696",
+              }}
+            >
+              Studied at
+            </p>
+            <img
+              src={universityLogo}
+              alt={university}
+              className=""
+              style={{
+                height: "35px", // Different height
+                // width: "70px", // Different width
+                objectFit: "cover", // Ensure the image fills the container
+              }}
+            />
           </div>
         </div>
       </div>
-      <div className="px-6 py-4">
-        <button className="w-full py-2 border border-orange-500 text-orange-500 font-semibold rounded-full hover:bg-orange-100">
+
+      <div
+        className="flex justify-center w-full py-4"
+        style={{
+          borderRadius: "24.15px",
+        }}
+      >
+        <button className="px-6 py-2 border border-orange-500 text-orange-500 font-semibold rounded-full hover:bg-orange-100">
           Learn More
         </button>
       </div>
@@ -165,30 +270,25 @@ const Mentor = () => {
         },
       },
     ],
+    // centerMode: true, // Optional: Center slides for better spacing
+    // centerPadding: "10px",
   };
 
   return (
-    <div className="relative py-16 bg-transparent min-h-screen">
-      <div className="absolute top-0 left-0 w-full overflow-hidden pointer-events-none">
-        <h2
-          className="text-center select-none font-extrabold text-gray-100/50 text-[150px]"
-          style={{ color: "#FFD9B17A" }}
-        >
-          MENTOR
-        </h2>
+    <div className="relative py-16  bg-transparent min-h-screen">
+      <div className="services-heading">
+        <span className="big-heading">OUR MENTOR</span>
+        <span className="small-heading">BEST MENTORS</span>
       </div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h3
-            className="mt-20 text-3xl sm:text-4xl lg:text-5xl"
-            style={{ color: "#D63715" }}
-          >
-            Connect with the Best Mentors
-          </h3>
-        </div>
+      <div
+        className="relative max-w-7xl mx-auto   sm:px-6 lg:px-8"
+        style={{
+          left: "40px",
+        }}
+      >
         <Slider {...settings}>
           {mentors.map((mentor, index) => (
-            <div key={index} className="px-4">
+            <div key={index} className="">
               <MentorCard {...mentor} />
             </div>
           ))}

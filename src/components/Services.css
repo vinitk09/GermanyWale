@@ -1,0 +1,262 @@
+.services-outer-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 10px; */
+    flex-direction: column;
+
+}
+
+.services-heading {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.services-heading>.big-heading {
+    font-family: Gilroy-ExtraBold;
+    font-size: 134.99px;
+    font-weight: 900;
+    line-height: 196.87px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFD9B17A;
+
+}
+
+.small-heading {
+    font-family: Gilroy;
+    font-size: 66.56px;
+    font-weight: 600;
+    line-height: 97.07px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    position: relative;
+
+    height: 98px;
+    top: -108.35px;
+    color: #D63715;
+    gap: 0px;
+    opacity: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content-divs {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+
+
+}
+
+.common-divs {
+    /* margin: 20px; */
+    border: 2px solid black;
+    /* height: 369.27px;s */
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    /* display: inline-block; */
+
+}
+
+
+
+.div1 {
+    display: flex;
+    align-items: center;
+    /* Align items to the top */
+    gap: 120px;
+
+    width: 100%;
+    /* Adjusts to available space */
+    justify-content: flex-start;
+    margin-bottom: 100px;
+
+}
+
+.div2 {
+    display: flex;
+    align-items: center;
+    /* Align items to the top */
+    gap: 120px;
+    /* Adds space between the image and text */
+    width: 100%;
+    /* Adjusts to available space */
+    justify-content: flex-start;
+
+}
+
+.img-div-1 {
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 80px; */
+
+}
+
+.simg1 {
+    width: 50%;
+    height: 369.27px;
+}
+
+
+.simg2 {
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-size: contain;
+    width: 50%;
+    height: 438.23px;
+    /* margin: 80px; */
+}
+
+.simg3 {
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-size: contain;
+    width: 50%;
+    height: 416.23px;
+    /* margin: 80px; */
+}
+
+.simg4 {
+    width: 50%;
+    height: 449.23px;
+    padding-right: 90px;
+    /* margin: 80px; */
+
+}
+
+.simg5 {
+    width: 50%;
+    height: 442.23px;
+    padding-left: 80px;
+}
+
+.simg6 {
+    width: 50%;
+    height: 417.23px;
+}
+
+.simg7 {
+    width: 50%;
+    height: 445.23px;
+}
+
+.simg8 {
+    width: 50%;
+    height: 427.57px;
+    padding-right: 90px;
+}
+
+
+
+.img-details-div-1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    /* padding: 80px; */
+
+}
+
+
+
+.img-details-div-1-heading {
+    font-family: Gilroy-Bold;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 60.95px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #101828;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.img-details-div-1-description {
+    font-family: Gilroy-Light;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #101828;
+    /* width: 483px; */
+    height: 103px;
+    margin-bottom: 30px;
+
+}
+
+.simgd1 {
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+.simgd2 {
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+.simgd3 {
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+.simgd4 {
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+.simgd5 {
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+.simgd6 {
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+.simgd7 {
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+.simgd8 {
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+
+.button-know-more {
+    font-family: Gilroy;
+    font-size: 16.93px;
+    font-weight: 700;
+    /* line-height: 23.7px; */
+    /* text-align: left; */
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    background: linear-gradient(92deg, #FF9422 6.81%, #D63715 90.38%);
+    width: 168.05px;
+    margin-top: 20px;
+}
+
+/* .img-details-div-1 {} */

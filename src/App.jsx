@@ -15,6 +15,7 @@ import Universities from "./components/Universities";
 import Mentor from "./components/Mentor";
 import ChooseUs from "./components/ChooseUs";
 import "./assets/fonts.css";
+import Transparency from "./components/Transparency";
 
 function App() {
   return (
@@ -31,10 +32,11 @@ function App() {
                   <ChooseUs />
                   <GlobalPresence />
                   <Testimonials />
-                  {/* <Services /> */}
-                  {/* <Partners /> */}
-                  {/* <Universities /> */}
-                  {/* <Mentor /> */}
+                  <Services />
+                  <Partners />
+                  <Transparency />
+                  <Universities />
+                  <Mentor />
                   {/* <TestimonialSlider /> */}
                 </>
               }

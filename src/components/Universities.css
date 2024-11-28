@@ -151,3 +151,38 @@
         transform: translateX(-20%);
     }
 }
+
+.services-heading {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.services-heading>.big-heading {
+    font-family: Gilroy-ExtraBold;
+    font-size: 134.99px;
+    font-weight: 400;
+    line-height: 196.87px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.small-heading {
+
+
+    height: 98px;
+    top: -108.35px;
+    color: #D63715;
+    font-family: Gilroy-SemiBold;
+    font-size: 66.56px;
+    font-weight: 400;
+    line-height: 129px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}

@@ -1,0 +1,79 @@
+.transaprency-main-container {
+    position: relative;
+    /* Needed for the pseudo-element */
+}
+
+.transaprency-main-container::before {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    /* Adjust to place the quadrant at the bottom-left */
+    left: -230px;
+    /* Centers the quadrant correctly */
+    width: 380px;
+    height: 288px;
+    background: linear-gradient(270deg, rgba(255, 148, 34, 0.6) 0%, rgba(214, 55, 21, 0.6) 100%);
+    /* border-radius: 0 100% 100% 0; */
+    transform: rotate(360deg);
+    /* Makes the shape a quarter ellipse */
+    opacity: 1;
+    /* Fully visible, adjust as needed */
+    backdrop-filter: blur(100px);
+    /* Adds blur effect */
+    z-index: 1;
+    /* Places the shape behind the content */
+}
+
+
+.transparency-img {
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px auto;
+    width: 1312px;
+    height: 562.52px;
+    top: 301px;
+    left: 100px;
+    gap: 0px;
+    border: 0.31px;
+    opacity: 0px;
+}
+
+
+.transaprency-main-container {
+    position: relative;
+    /* Required for pseudo-elements */
+    overflow: hidden;
+    /* Ensures shadow doesn't overflow the container */
+}
+
+.transaprency-main-container::before {
+    content: '';
+    position: absolute;
+    bottom: -160px;
+    /* Positioning for the shadow */
+    left: -250px;
+    /* Adjusts the placement at the bottom-left */
+    width: 380px;
+    height: 350px;
+    /* Makes the shape a circle */
+    background: linear-gradient(270deg,
+            rgba(255, 148, 34, 0.6) 0%,
+            rgba(214, 55, 21, 0.6) 100%);
+    border-radius: 100%;
+    /* Makes it circular */
+    transform: rotate(30deg);
+    /* Rotates the circle to show a portion */
+    box-shadow: 0 0 120px rgba(255, 148, 34, 0.6),
+        0 0 180px rgba(214, 55, 21, 0.6);
+    /* Adds glowing box shadow */
+    backdrop-filter: blur(0px);
+    /* Adds blur effect */
+    opacity: 1;
+    /* Fully visible */
+    z-index: 1;
+    /* Ensures it's below content */
+}

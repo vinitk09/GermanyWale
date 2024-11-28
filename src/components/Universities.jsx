@@ -110,25 +110,11 @@ const Universities = () => {
   const secondRow = universities.slice(Math.ceil(universities.length / 2));
 
   return (
-    <div className="relative py-16 bg-transparent min-h-screen">
+    <div className="relative py-12 min-h-screen">
       {/* Background and Heading */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden pointer-events-none">
-        <h2
-          className="text-center select-none font-extrabold text-gray-100/50
-          text-[40px] sm:text-[60px] md:text-[80px] lg:text-[120px] xl:text-[150px]"
-          style={{ color: "#FFD9B17A" }}
-        >
-          UNIVERSITIES
-        </h2>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-        <h3
-          className="mt-20 text-3xl sm:text-4xl lg:text-5xl"
-          style={{ color: "#D63715" }}
-        >
-          Top Universities Across the Globe
-        </h3>
+      <div className="services-heading">
+        <span className="big-heading">UNIVERSITIES</span>
+        <span className="small-heading">TOP UNIVERSITIES</span>
       </div>
 
       {/* Infinite Carousel */}
@@ -144,6 +130,7 @@ const Universities = () => {
                   className="university-image"
                   style={{
                     ...universities.styles,
+                    // objectFit: "cover",
                   }}
                 />
               </div>
