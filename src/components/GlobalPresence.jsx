@@ -79,25 +79,4 @@ const GlobalPresence = () => {
   );
 };
 
-// const GlobalPresence = () => {
-//   return (
-//     <div className="slider-main-container">
-//       <div className="heading-global-presence">GLOBAL PRESENCE</div>
-//       <div className="slider">
-//         <div className="slide img1"></div>
-//         <div className="slide img2"></div>
-//         <div className="slide img3"></div>
-//         <div className="slide img4"></div>
-//         <div className="slide img5"></div>
-
-//         {/* Duplicate Slide */}
-//         <div className="slide img1"></div>
-//         <div className="slide img2"></div>
-//         <div className="slide img3"></div>
-//         <div className="slide img4"></div>
-//         <div className="slide img5"></div>
-//       </div>
-//     </div>
-//   );
-// };
 export default GlobalPresence;

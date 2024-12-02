@@ -199,9 +199,9 @@
 .testimonial-role {
     /* color: #E84C24; */
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2px;
     position: relative;
-    padding-bottom: 1rem;
+    padding-bottom: 10px;
 }
 
 .testimonial-role::after {
@@ -402,7 +402,16 @@
 @media (max-width:468px) {
     .testimonial-heading {
         font-size: 46px;
-        font-weight: 400;
+
+        font-family: Gilroy;
+        font-size: 44.99px;
+        font-weight: 900;
+        line-height: 196.87px;
+        letter-spacing: 0.01em;
+        /* text-align: left; */
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #FFD9B17A;
     }
 
     .prev {

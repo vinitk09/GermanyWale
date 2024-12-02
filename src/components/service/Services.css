@@ -1,0 +1,195 @@
+.services-heading {
+    font-family: Gilroy;
+    font-size: 134.99px;
+    font-weight: 900;
+    line-height: 196.87px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFD9B17A;
+}
+
+.what-we-do {
+    font-family: Gilroy;
+    font-size: 66.56px;
+    font-weight: 600;
+    line-height: 97.07px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #D63715;
+    position: absolute;
+    left: 400px;
+    top: 50%;
+}
+
+.card-heading {
+    font-family: Gilroy-Bold;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 60.95px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #101828;
+}
+
+.card-description {
+    font-family: Gilroy-Light;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #101828;
+
+}
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    width: 100%;
+}
+
+/* Flex Container for Service Card */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* Gap between image and text */
+    margin-bottom: 16px;
+    width: 100%;
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
+}
+
+/* Image Section */
+.service-card-image {
+    order: 1;
+    /* Default order for image */
+    width: 100%;
+    padding: 16px;
+}
+
+/* Text Section */
+.service-card-text {
+    order: 2;
+    /* Default order for text */
+    width: 100%;
+    padding: 16px;
+}
+
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .service-card {
+        flex-direction: column;
+        /* Column layout */
+        gap: 24px;
+        /* Adjusted gap for tablet */
+    }
+
+    .service-card-image {
+        order: 1;
+        /* Image comes first */
+        width: 100%;
+        /* Full width for image */
+    }
+
+    .service-card-text {
+        order: 2;
+        /* Text comes second */
+        width: 100%;
+        /* Full width for text */
+    }
+
+    .what-we-do {
+        font-family: Gilroy;
+        font-size: 56.56px;
+        font-weight: 600;
+        line-height: 97.07px;
+        letter-spacing: 0.01em;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #D63715;
+        position: absolute;
+        left: 150px;
+        top: 50%;
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 468px) {
+    .service-card {
+        flex-direction: column;
+        /* Column layout */
+        gap: 16px;
+        /* Adjusted gap for mobile */
+    }
+
+    .service-card-image {
+        order: 1;
+        /* Image comes first */
+        width: 100%;
+        /* Full width for image */
+    }
+
+    .service-card-text {
+        order: 2;
+        /* Text comes second */
+        width: 20px;
+        /* Full width for text */
+    }
+
+    .what-we-do {
+        font-family: Gilroy;
+        font-size: 36.56px;
+        font-weight: 600;
+        line-height: 97.07px;
+        letter-spacing: 0.01em;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #D63715;
+        position: absolute;
+        left: 70px;
+        top: 40%;
+    }
+
+    .card-heading {
+        font-family: Gilroy-Bold;
+        font-size: 44px;
+        font-weight: 400;
+        line-height: 60.95px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #101828;
+    }
+
+    .services-heading {
+        font-family: Gilroy;
+        font-size: 76.99px;
+        font-weight: 900;
+        line-height: 196.87px;
+        letter-spacing: 0.01em;
+        /* text-align: left; */
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #FFD9B17A;
+    }
+}
