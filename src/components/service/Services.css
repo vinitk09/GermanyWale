@@ -129,6 +129,15 @@ body {
         left: 150px;
         top: 50%;
     }
+
+    .airplane-icon {
+        display: none;
+    }
+
+    /* Hide the vertical line on mobile */
+    .vertical-line {
+        display: none;
+    }
 }
 
 /* Small Screens (Mobile) */
@@ -192,4 +201,19 @@ body {
         text-decoration-skip-ink: none;
         color: #FFD9B17A;
     }
+
+    .airplane-icon {
+        display: none;
+    }
+
+    /* Hide the vertical line on mobile */
+    .vertical-line {
+        display: none;
+    }
+}
+
+.vertical-divider {
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, #FF9422, #D63715);
 }

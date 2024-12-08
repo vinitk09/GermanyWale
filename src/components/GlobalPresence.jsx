@@ -52,25 +52,35 @@ const GlobalPresence = () => {
       <h2 className="heading-global-presence">GLOBAL PRESENCE</h2>
 
       <div className="slider-wrapper flex justify-center">
-        <Slider {...rightSliderSettings} className="w-full max-w-7xl ">
+        <Slider {...rightSliderSettings} className="w-full max-w-7xl">
           {countryImages.map((image, index) => (
             <div
               key={index}
-              className="flex justify-center items-center "
+              className="flex justify-center items-center"
               style={{
                 background: "transparent",
               }}
             >
+              {/* Outer container for padding */}
               <div
-                className="w-40 h-40 shadow-flag"
+                className="p-8"
                 style={{
-                  backgroundImage: `url(${image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
                   borderRadius: "50%",
-                  overflow: "hidden",
+                  background: "transparent", // Optional background color
                 }}
-              />
+              >
+                {/* Image with shadow */}
+                <div
+                  className="w-40 h-40 shadow-flag"
+                  style={{
+                    backgroundImage: `url(${image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                  }}
+                />
+              </div>
             </div>
           ))}
         </Slider>

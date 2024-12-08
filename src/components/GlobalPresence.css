@@ -134,7 +134,7 @@
     }
 
     /* Keyframes for seamless sliding */
-    @keyframes slideAnimation {
+    /* @keyframes slideAnimation {
         0% {
             transform: translateX(100%);
         }
@@ -142,7 +142,7 @@
         100% {
             transform: translateX(-400%);
         }
-    }
+    } */
 
 }
 
@@ -186,7 +186,6 @@
         box-shadow: 6px 6px 32px #EA7D06;
     }
 
-    /* Keyframes for seamless sliding */
     @keyframes slideAnimation {
         0% {
             transform: translateX(100%);
@@ -197,3 +196,26 @@
         }
     }
 }
+
+/* .heading-global-presence {
+    font-size: 66.56px;
+    font-weight: bold;
+    text-transform: uppercase;
+} */
+
+.shadow-flag {
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
+
+    box-shadow: 6px 6px 32px #EA7D06;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.shadow-flag:hover {
+    box-shadow: 6px 6px 32px #EA7D06;
+    transform: scale(1.05);
+}
+
+/* .slider-wrapper {
+    padding: 1rem 0;
+} */
