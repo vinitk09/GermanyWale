@@ -10,7 +10,6 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Scroll event listener
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {

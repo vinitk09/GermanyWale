@@ -7,11 +7,9 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    /* Prevent horizontal scrolling */
     width: 100%;
 }
 
-/* Initial navbar style (transparent background) */
 .navbar {
     position: fixed;
     top: 0;
@@ -20,11 +18,11 @@ body {
     background: transparent;
     z-index: 10;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 2000;
 }
 
 .navbar.scrolled {
     background-color: #ffffff;
-    /* White background */
     box-shadow: 0 2px 5px rgb(236, 231, 231);
 
 }

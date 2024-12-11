@@ -1,36 +1,32 @@
 import React from "react";
 import hd from "../../assets/handshake.png";
-
+import "./partner.css";
 const PartnersHeader = () => (
-  <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-7xl gap-8 lg:gap-16">
+  <div className="flex flex-col items-center w-full max-w-7xl gap-4 px-4">
     <h2
-      className="text-4xl md:text-5xl lg:text-6xl partners-header tracking-tight"
+      className="  partners-header tracking-tight p-header"
       style={{
-        fontFamily: "Gilroy-Bold",
-        fontSize: "64px",
-        fontWeight: 400,
-        lineHeight: "60.95px",
-        letterSpacing: "-0.02em",
-        textAlign: "center",
-        textUnderlinePosition: "from-font",
-        textDecorationSkipInk: "none",
+        background: "linear-gradient(90deg, #EA7D06 0%, #D63715 100%)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
       }}
     >
       OUR PARTNERS
     </h2>
-
-    <img
-      src={hd}
-      alt="Handshake"
-      className=""
+    <p
+      className=" text-center p-header-des"
       style={{
-        width: "478.97px",
-        height: "205.11px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        fontFamily: "Gilroy-SemiBold",
+        fontWeight: 400,
+        lineHeight: "1.5",
+        textAlign: "center",
+        color: "#E0E0E0",
+        maxWidth: "900px",
       }}
-    />
+    >
+      We have collaborate with a diverse array of partners, each bringing unique
+      expertise and value to make journey of our student hassle free
+    </p>
   </div>
 );
 

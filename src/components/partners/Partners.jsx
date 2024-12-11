@@ -3,6 +3,8 @@ import PartnersHeader from "./PartnersHeader";
 import WavePattern from "./WavePattern";
 import PartnerLogo from "./partnerLogo";
 import a from "../../assets/axis.png";
+import tw from "../../assets/partner/topWave.png";
+import dw from "../../assets/partner/downWave.png";
 
 const partners = [
   {
@@ -33,13 +35,36 @@ const partners = [
 
 const Partners = () => {
   return (
-    <section className="bg-gray-900 text-white py-16 md:py-24">
-      <div className="container mx-auto px-4">
+    <section
+      className="text-white "
+      style={{
+        background: "#000000",
+      }}
+    >
+      {/* <WavePattern /> */}
+      <div
+        className="w-full"
+        style={{
+          position: "relative",
+          // top: "50px",
+        }}
+      >
+        <img
+          src={tw}
+          alt="Wave Pattern"
+          className="object-cover w-full h-16 "
+        />
+      </div>
+      <div
+        className="container mx-auto px-4"
+        style={{
+          position: "relative",
+          zIndex: "10",
+        }}
+      >
         <PartnersHeader />
 
         <div className="relative">
-          <WavePattern />
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-12 items-center justify-items-center mt-8 md:mt-12 lg:mt-16">
             {partners.map((partner) => (
               <div key={partner.name} className="w-full flex justify-center">
@@ -52,6 +77,19 @@ const Partners = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div
+        className="w-full flex"
+        style={{
+          position: "relative",
+          top: "-10px",
+        }}
+      >
+        <img
+          src={dw}
+          alt="Wave Pattern"
+          className="object-cover w-full h-16 "
+        />
       </div>
     </section>
   );

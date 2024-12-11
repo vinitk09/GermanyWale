@@ -96,6 +96,11 @@ export function ServiceCard({
             isReversed ? "lg:flex-row-reverse" : ""
           } items-center`}
         >
+
+            {/* Image Section */}
+          <div className="w-full lg:w-1/2 p-4">
+            <ResponsiveImage src={image} alt={imageAlt} className="" />
+          </div>
           {/* Text Section */}
           <div className="w-full lg:w-1/2 space-y-6 px-4 lg:px-8">
             <h3 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
@@ -113,10 +118,7 @@ export function ServiceCard({
             </button>
           </div>
 
-          {/* Image Section */}
-          <div className="w-full lg:w-1/2 p-4">
-            <ResponsiveImage src={image} alt={imageAlt} className="" />
-          </div>
+        
         </div>
       </div>
     </div>
