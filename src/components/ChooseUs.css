@@ -40,8 +40,9 @@
     opacity: 0px;
     font-family: Gilroy;
     font-size: 64px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 29px;
+    font-style: bold;
 
     color: #D63715;
 }
@@ -158,9 +159,9 @@
 .card-common span {
     position: relative;
     z-index: 1;
-    font-family: Gilroy-Bold;
+    font-family: Gilroy;
     font-size: 36px;
-    font-weight: 400;
+    font-weight: 800;
     line-height: 97px;
     text-align: center;
     text-underline-position: from-font;
@@ -178,15 +179,16 @@
 .card-common>p {
     position: relative;
     z-index: 1;
-    font-family: Gilroy-Regular;
+    font-family: Gilroy;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 23px;
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #EA7D06;
     width: 315px;
+    line-height: 23px;
 }
 
 
@@ -237,76 +239,7 @@
     /* Change icon color to #EA7D06 */
 }
 
-@media (max-width:468px) {
-    .choose-us-container {
-        height: 1900px;
-    }
 
-    .choose-us-heading-outer-container>.choose-us-heading-2 {
-        font-size: 40px;
-        font-weight: 600;
-        line-height: 44px;
-        text-align: center;
-        letter-spacing: 0.01em;
-
-
-    }
-
-    .choose-us-card-section {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    .card-common {
-        height: 320px;
-        width: 290px;
-        margin: 1.2rem;
-
-    }
-
-    .card-common>span {
-        font-size: 34px;
-
-        letter-spacing: 0.02em;
-    }
-
-    .card-container>.small-card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        width: 88px;
-        height: 83px;
-        top: -75px;
-        left: 120px;
-        gap: 0px;
-        border-radius: 12px;
-        opacity: 0px;
-        z-index: 1;
-        background: linear-gradient(180deg, #EA7D06 0%, #D63715 100%);
-
-    }
-
-    .icon {
-        font-size: 50px;
-        /* Adjust size as needed */
-        color: #FFFFFF;
-        /* White color for the icon */
-        display: inline-block;
-
-    }
-
-    .card-common>.card-content {
-        font-size: 28px;
-    }
-
-    .card-common>p {
-        font-size: 22px;
-        width: 80%;
-    }
-
-}
 
 @media (max-width:768px) {
     .choose-us-container {
@@ -444,4 +377,80 @@
         letter-spacing: 0.02em;
     }
 
+}
+
+@media (max-width:468px) {
+    .choose-us-container {
+        height: 1900px;
+    }
+
+    .choose-us-heading-outer-container>.choose-us-heading-2 {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 44px;
+        text-align: center;
+        letter-spacing: 0.01em;
+
+
+    }
+
+    .choose-us-card-section {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    /* .card-common {
+        height: 320px;
+        width: 290px;
+        margin: 1.2rem;
+
+    } */
+
+    .card-common>span {
+        font-size: 34px;
+
+        letter-spacing: 0.02em;
+    }
+
+    /* .card-container>.small-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 88px;
+        height: 83px;
+        top: -75px;
+        left: 120px;
+        gap: 0px;
+        border-radius: 12px;
+        opacity: 0px;
+        z-index: 1;
+        background: linear-gradient(180deg, #EA7D06 0%, #D63715 100%);
+
+    } */
+
+    .icon {
+        font-size: 50px;
+        /* Adjust size as needed */
+        color: #FFFFFF;
+        /* White color for the icon */
+        display: inline-block;
+
+    }
+
+    /* 
+    .card-common>.card-content {
+        font-size: 28px;
+    } */
+
+    /* .card-common>p {
+        font-size: 22px;
+        width: 80%;
+    } */
+    .card2>.card-content {
+        font-size: 25px;
+
+        /* letter-spacing: 0.02em; */
+    }
 }

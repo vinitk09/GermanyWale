@@ -13,7 +13,7 @@
 .what-we-do {
     font-family: Gilroy;
     font-size: 66.56px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 97.07px;
     letter-spacing: 0.01em;
     text-align: center;
@@ -21,7 +21,7 @@
     text-decoration-skip-ink: none;
     color: #D63715;
     position: absolute;
-    left: 400px;
+    left: 430px;
     top: 50%;
 }
 
@@ -38,9 +38,9 @@
 }
 
 .card-description {
-    font-family: Gilroy-Light;
+    font-family: Gilroy;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 29px;
     text-align: left;
     text-underline-position: from-font;

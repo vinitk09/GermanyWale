@@ -42,22 +42,24 @@ const MentorCard: React.FC<MentorCardProps> = ({
           <p className="role-m"
           style={{
             fontFamily:"Gilroy",
-            fontSize:"10.8px",
-            lineHeight:"13.23px",
+            fontSize:"16.8px",
+            lineHeight:"14.23px",
             textAlign:"center",
-            color:"#969696"
+            color:"#969696",
+            marginTop:"4px"
+            // paddingTop:"10px"
           }}>{role}</p>
         </div>
 
         {/* Company and University */}
-        <div className="w-full px-4 sm:px-8">
+        <div className="w-full ">
           <div className="flex justify-between items-center gap-4">
             <div className="flex flex-col items-center flex-1">
               <p className="company-m">Working at</p>
               <img
                 src={companyLogo}
                 alt={company}
-                className="h-8 w-20 object-contain"
+                className="h-20 w-20 object-contain"
               />
             </div>
             <div className="flex flex-col items-center flex-1">
@@ -65,7 +67,7 @@ const MentorCard: React.FC<MentorCardProps> = ({
               <img
                 src={universityLogo}
                 alt={university}
-                className="h-9 w-20 object-contain"
+                className="h-20 w-25 object-contain"
               />
             </div>
           </div>

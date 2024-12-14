@@ -50,9 +50,14 @@ const GlobalPresence = () => {
   return (
     <div className="container mx-auto p-4 text-center">
       <h2 className="heading-global-presence">GLOBAL PRESENCE</h2>
-
       <div className="slider-wrapper flex justify-center">
-        <Slider {...rightSliderSettings} className="w-full max-w-7xl">
+        <Slider
+          {...rightSliderSettings}
+          className="w-full max-w-7xl"
+          style={{
+            width: "80%",
+          }}
+        >
           {countryImages.map((image, index) => (
             <div
               key={index}
@@ -71,7 +76,7 @@ const GlobalPresence = () => {
               >
                 {/* Image with shadow */}
                 <div
-                  className="w-40 h-40 shadow-flag"
+                  className="w-32 h-32 shadow-flag"
                   style={{
                     backgroundImage: `url(${image})`,
                     backgroundSize: "cover",

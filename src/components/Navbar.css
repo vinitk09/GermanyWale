@@ -1,6 +1,7 @@
-* {
+/* * {
     box-sizing: border-box;
-}
+    font-family: 'Gilroy', sans-serif;
+} */
 
 html,
 body {
@@ -51,7 +52,7 @@ body {
 }
 
 .desktop-links {
-    font-family: Gilroy;
+    /* font-family: Gilroy; */
     display: flex;
     gap: 20.55px;
     opacity: 0px;
@@ -67,9 +68,10 @@ body {
 }
 
 .navbar-link.active {
-    font-family: Gilroy-Bold;
+    font-family: Gilroy;
     font-size: 19.73px;
-    font-weight: 400;
+    font-weight: 700;
+    font-style: bold;
     background-clip: text;
     color: transparent;
 

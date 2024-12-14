@@ -103,10 +103,18 @@ export function ServiceCard({
           </div>
           {/* Text Section */}
           <div className="w-full lg:w-1/2 space-y-6 px-4 lg:px-8">
-            <h3 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
+            <h3 className="text-3xl lg:text-4xl xl:text-5xl leading-tight"
+            style={{
+              fontFamily:"Gilroy",
+              fontWeight:"600"
+            }}>
               {title}
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg leading-relaxed "
+            style={{
+              fontFamily:"Gilroy",
+              fontWeight:"300"
+            }}>
               {description}
             </p>
             <button

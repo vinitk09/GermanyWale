@@ -467,7 +467,7 @@ function Testimonials() {
                 key={testimonials[index].id}
                 className={`testimonial-card ${position === 1 ? "center" : ""}`}
                 style={{
-                  height: "550px",
+                  height: "530px",
                   width: "400px",
                 }}
               >
@@ -510,8 +510,10 @@ function Testimonials() {
                       className="university-image object-contain"
                       style={{
                         width: "209px",
-                        height: "47px",
+                        height: "97px",
                         paddingBottom: "8px",
+                        filter: "none",
+                        boxShadow: "none",
                       }}
                     />
                   )}
@@ -522,9 +524,10 @@ function Testimonials() {
                       fontFamily: "Gilroy",
                       fontSize: "12px",
                       fontWeight: "400",
-                      lineHeight: "24.28px",
+                      // lineHeight: "24.28px",
                       textAlign: "center",
                       color: "#525252",
+                      // marginBottom: "40px",
                     }}
                   >
                     {testimonials[index].text}

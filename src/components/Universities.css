@@ -86,8 +86,9 @@
 
 
 .carousel-container {
-    width: 100%;
+    width: 75%;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 .carousel-track {
@@ -131,7 +132,7 @@
 }
 
 .university-image {
-    width: 150px;
+    width: 190px;
     height: auto;
     filter: grayscale(100%);
     transition: all 0.3s ease;
@@ -164,7 +165,7 @@
 }
 
 .big-heading-u {
-    font-family: "Gilroy-ExtraBold";
+    font-family: "Gilroy";
     font-size: 134px;
     /* Responsive font size based on viewport width */
     font-weight: 900;
@@ -179,7 +180,7 @@
     font-family: "Gilroy";
     font-size: 66px;
     /* Responsive font size for smaller heading */
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.5em;
     color: #d63715;
     position: relative;
@@ -201,6 +202,18 @@
         top: -65px;
         /* letter-spacing: 0.03em; */
     }
+
+    .university-image {
+        width: 140px;
+        height: auto;
+        filter: grayscale(100%);
+        transition: all 0.3s ease;
+    }
+
+    .university-image:hover {
+        filter: grayscale(0%);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -217,5 +230,17 @@
         top: -44px;
         font-size: 7.5vw;
         /* Smaller text for compact view */
+    }
+
+    .university-image {
+        width: 120px;
+        height: auto;
+        filter: grayscale(100%);
+        transition: all 0.3s ease;
+    }
+
+    .university-image:hover {
+        filter: grayscale(0%);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     }
 }

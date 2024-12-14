@@ -4,7 +4,7 @@ import "./partner.css";
 const PartnersHeader = () => (
   <div className="flex flex-col items-center w-full max-w-7xl gap-4 px-4">
     <h2
-      className="  partners-header tracking-tight p-header"
+      className="  partners-header  p-header"
       style={{
         background: "linear-gradient(90deg, #EA7D06 0%, #D63715 100%)",
         WebkitBackgroundClip: "text",
@@ -16,7 +16,7 @@ const PartnersHeader = () => (
     <p
       className=" text-center p-header-des"
       style={{
-        fontFamily: "Gilroy-SemiBold",
+        fontFamily: "Gilroy",
         fontWeight: 400,
         lineHeight: "1.5",
         textAlign: "center",

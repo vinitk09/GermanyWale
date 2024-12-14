@@ -17,8 +17,8 @@ const Universities = () => {
       src: frankfurt,
       alt: "Frankfurt University",
       styles: {
-        width: "174.91px",
-        height: "57.03px",
+        width: "184.91px", // Increased by 10px
+        height: "67.03px", // Increased by 10px
         opacity: "1",
       },
     },
@@ -26,8 +26,8 @@ const Universities = () => {
       src: hoch,
       alt: "Hoch School",
       styles: {
-        width: "178.58px",
-        height: "37.55px",
+        width: "188.58px", // Increased by 10px
+        height: "47.55px", // Increased by 10px
         opacity: "0.5",
       },
     },
@@ -35,8 +35,8 @@ const Universities = () => {
       src: rwthUniversity,
       alt: "RWTH University",
       styles: {
-        width: "175.82px",
-        height: "47.98px",
+        width: "185.82px", // Increased by 10px
+        height: "57.98px", // Increased by 10px
         opacity: "0.7",
       },
     },
@@ -44,8 +44,8 @@ const Universities = () => {
       src: universityBerlin,
       alt: "Berlin University",
       styles: {
-        width: "116.11px",
-        height: "257.28px",
+        width: "126.11px", // Increased by 10px
+        height: "267.28px", // Increased by 10px
         opacity: "0.8",
       },
     },
@@ -53,8 +53,8 @@ const Universities = () => {
       src: universityBonn,
       alt: "Bonn University",
       styles: {
-        width: "139.28px",
-        height: "54.24px",
+        width: "149.28px", // Increased by 10px
+        height: "64.24px", // Increased by 10px
         opacity: "0.6",
       },
     },
@@ -62,8 +62,8 @@ const Universities = () => {
       src: universityHamburg,
       alt: "Hamburg University",
       styles: {
-        width: "98.01px",
-        height: "73px",
+        width: "108.01px", // Increased by 10px
+        height: "83px", // Increased by 10px
         opacity: "0.9",
       },
     },
@@ -71,8 +71,8 @@ const Universities = () => {
       src: universityHamburgRed,
       alt: "Hamburg University (Red)",
       styles: {
-        width: "182.03px",
-        height: "59.81px",
+        width: "192.03px", // Increased by 10px
+        height: "69.81px", // Increased by 10px
         opacity: "0.8",
       },
     },
@@ -80,8 +80,8 @@ const Universities = () => {
       src: universityOfEurope,
       alt: "University of Europe",
       styles: {
-        width: "153.05px",
-        height: "44.86px",
+        width: "163.05px", // Increased by 10px
+        height: "54.86px", // Increased by 10px
         opacity: "1",
       },
     },
@@ -89,8 +89,8 @@ const Universities = () => {
       src: universityofstut,
       alt: "University of Stuttgart",
       styles: {
-        width: "174.44px",
-        height: "39.64px",
+        width: "184.44px", // Increased by 10px
+        height: "49.64px", // Increased by 10px
         opacity: "0.6",
       },
     },
@@ -98,8 +98,8 @@ const Universities = () => {
       src: universityPaderborn,
       alt: "Paderborn University",
       styles: {
-        width: "212.61px",
-        height: "56.27px",
+        width: "222.61px", // Increased by 10px
+        height: "66.27px", // Increased by 10px
         opacity: "0.7",
       },
     },

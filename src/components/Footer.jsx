@@ -53,7 +53,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/universities"
-                  className="hover:text-blue-400 transition-colors"
+                  className="hover:text-orange-400 transition-colors"
                 >
                   PhD in Germany{" "}
                 </Link>
@@ -61,7 +61,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/german-language"
-                  className="hover:text-blue-400 transition-colors"
+                  className="hover:text-orange-400 transition-colors"
                 >
                   MBA in Germany{" "}
                 </Link>
@@ -120,7 +120,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/universities"
-                  className="hover:text-blue-400 transition-colors"
+                  className="hover:text-orange-400 transition-colors"
                 >
                   Service in Germany
                 </Link>
@@ -128,7 +128,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/german-language"
-                  className="hover:text-blue-400 transition-colors"
+                  className="hover:text-orange-400 transition-colors"
                 >
                   Service in India
                 </Link>
@@ -154,15 +154,15 @@ const Footer = () => {
               Contact Us
             </h3>
             <ul className="space-y-3">
-              <li className="flex items-center">
+              <li className="flex items-center hover:text-orange-400 transition-colors cursor-pointer">
                 <FaPhoneAlt className="mr-2" />
                 <span>Home</span>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center hover:text-orange-400 transition-colors cursor-pointer">
                 <FaEnvelope className="mr-2" />
                 <span>About</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex items-start hover:text-orange-400 transition-colors cursor-pointer">
                 <FaMapMarkerAlt className="mr-2 mt-1" />
                 <span>Contact</span>
               </li>
@@ -190,7 +190,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Your email address"
-                className="w-full px-3 py-2 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                 style={{
                   // width: "382.87px",
                   height: "61.89px",
@@ -221,7 +221,7 @@ const Footer = () => {
                 </a>
                 <button
                   type="submit"
-                  className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-orange-700 transition-colors"
+                  className="w-full px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors"
                   style={{
                     width: "124.21px",
                     height: "51.89px",

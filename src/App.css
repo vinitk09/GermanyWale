@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/fonts/gilroy/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 400;
+    /* Set to bold weight */
+    font-style: normal;
+    /* Normal style */
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/fonts/gilroy/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
+    /* Regular weight */
+    font-style: normal;
+}
+
+/* You can add more font styles (e.g., Light, SemiBold) as needed */
