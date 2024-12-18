@@ -19,6 +19,7 @@ import Transparency from "./components/Transparency";
 import MentorSection from "./components/mentor/MentorSection";
 import Services from "./components/service/Services";
 import Partners from "./components/partners/Partners";
+import ChooseUs2 from "./components/ChooseUs2";
 // import Partners from "./components/partners/Partners";
 
 function App() {
@@ -33,7 +34,8 @@ function App() {
               element={
                 <>
                   <Hero />
-                  <ChooseUs />
+                  {/* <ChooseUs /> */}
+                  <ChooseUs2 />
                   <GlobalPresence />
                   <Testimonials />
                   {/* <Services /> */}

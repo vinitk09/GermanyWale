@@ -1,5 +1,5 @@
 import React from "react";
-import "./ChooseUs.css";
+// import "./ChooseUs.css";
 import "remixicon/fonts/remixicon.css"; // Import Remix icons
 
 const ChooseUs = () => {

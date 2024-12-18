@@ -55,7 +55,7 @@ const GlobalPresence = () => {
           {...rightSliderSettings}
           className="w-full max-w-7xl"
           style={{
-            width: "80%",
+            width: "100%",
           }}
         >
           {countryImages.map((image, index) => (

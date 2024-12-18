@@ -106,14 +106,16 @@ export function ServiceCard({
             <h3 className="text-3xl lg:text-4xl xl:text-5xl leading-tight"
             style={{
               fontFamily:"Gilroy",
-              fontWeight:"600"
+              fontWeight:"600",
+              fontSize:"32px"
             }}>
               {title}
             </h3>
             <p className="text-lg leading-relaxed "
             style={{
               fontFamily:"Gilroy",
-              fontWeight:"300"
+              fontWeight:"300",
+              fontSize:"18px"
             }}>
               {description}
             </p>
